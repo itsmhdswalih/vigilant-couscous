@@ -1,6 +1,15 @@
 <!DOCTYPE html>
-  <html><head><meta charset="utf-8"><title>itsmhdswalih</title>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>itsmhdswalih | Copy. Create. Go Viral.</title>
   <script>
-    var l=window.location;
-    l.replace(l.protocol+'//'+l.hostname+(l.port?':'+l.port:'')+'/Promptweb/'+'?/'+l.pathname.slice('/Promptweb/'.length)+(l.search?'&'+l.search.slice(1):'')+l.hash);
-  </script></head><body></body></html>
+    // SPA fallback redirect for GitHub Pages
+    var path = window.location.pathname;
+    var query = window.location.search;
+    var hash = window.location.hash;
+    window.location.replace('/' + (query ? query + '&p=' + encodeURIComponent(path) : '?p=' + encodeURIComponent(path)) + hash);
+  </script>
+</head>
+<body></body>
+</html>
