@@ -11,6 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400..800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" crossorigin href="/Promptweb/assets/index-q552Kpjb.css">
     <script>
+      (function () {
+        var p = window.location.pathname;
+        if (!p.startsWith('/Promptweb/') && p !== '/Promptweb') {
+          window.location.replace('/Promptweb/' + window.location.search + window.location.hash);
+        }
+      })();
+    </script>
+    <script>
       (async function () {
         var PROMPT_KEY = 'itsmhdswalih_prompts';
         var DB_NAME = 'itsmhdswalih_images_db';
