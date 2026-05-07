@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>itsmhdswalih | Copy. Create. Go Viral.</title>
+    <meta name="description" content="Daily AI prompts for creators, reel makers & editors" />
+    <link rel="icon" type="image/svg+xml" href="/Promptweb/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" crossorigin href="/Promptweb/assets/index-q552Kpjb.css">
+    <script>
+      (async function () {
+        var PROMPT_KEY = 'itsmhdswalih_prompts';
+        var DB_NAME = 'itsmhdswalih_images_db';
+        var STORE = 'images';
+        var imageCache = {};
+
+        function openDB() {
+          return new Promise(function (resolve, reject) {
+            var req = indexedDB.open(DB_NAME, 1);
+            req.onupgradeneeded = function (e) {
+              e.target.result.createObjectStore(STORE);
+            };
+            req.onsuccess = function (e) { resolve(e.target.result); };
+            req.onerror = function () { reject(); };
+          });
+        }
+
+        function dbGetAll(db) {
+          return new Promise(function (resolve) {
+            try {
+              var tx = db.transaction(STORE, 'readonly');
+              var store = tx.objectStore(STORE);
+              var result = {};
+              var req = store.openCursor();
+              req.onsuccess = function (e) {
+                var cursor = e.target.result;
+                if (cursor) {
+                  result[cursor.key] = cursor.value;
+                  cursor.continue();
+                } else {
+                  resolve(result);
+                }
+              };
+              req.onerror = function () { resolve({}); };
+            } catch (e) { resolve({}); }
+          });
+        }
+
+        function dbPut(db, key, value) {
+          try {
+            var tx = db.transaction(STORE, 'readwrite');
+            tx.objectStore(STORE).put(value, key);
+          } catch (e) {}
+        }
+
+        function dbDelete(db, key) {
+          try {
+            var tx = db.transaction(STORE, 'readwrite');
+            tx.objectStore(STORE).delete(key);
+          } catch (e) {}
+        }
+
+        var db;
+        try {
+          db = await openDB();
+          imageCache = await dbGetAll(db);
+        } catch (e) {
+          db = null;
+        }
+
+        var origSetItem = Storage.prototype.setItem;
+        var origGetItem = Storage.prototype.getItem;
+
+        if (db) {
+          try {
+            var existingRaw = origGetItem.call(localStorage, PROMPT_KEY);
+            if (existingRaw) {
+              var prompts = JSON.parse(existingRaw);
+              var rehydrated = prompts.map(function (p) {
+                if (p.image === '__img__' && imageCache[p.id]) {
+                  return Object.assign({}, p, { image: imageCache[p.id] });
+                }
+                return p;
+              });
+              origSetItem.call(localStorage, PROMPT_KEY, JSON.stringify(rehydrated));
+            }
+          } catch (e) {}
+
+          Storage.prototype.setItem = function (key, value) {
+            if (key === PROMPT_KEY) {
+              try {
+                var prompts = JSON.parse(value);
+                var ids = {};
+                var toStore = prompts.map(function (p) {
+                  ids[p.id] = true;
+                  if (p.image && p.image.length > 200) {
+                    imageCache[p.id] = p.image;
+                    dbPut(db, p.id, p.image);
+                    return Object.assign({}, p, { image: '__img__' });
+                  }
+                  return p;
+                });
+                Object.keys(imageCache).forEach(function (id) {
+                  if (!ids[id]) {
+                    dbDelete(db, id);
+                    delete imageCache[id];
+                  }
+                });
+                try {
+                  origSetItem.call(this, key, JSON.stringify(toStore));
+                } catch (e) {}
+              } catch (e) {
+                try { origSetItem.call(this, key, value); } catch (e2) {}
+              }
+            } else {
+              origSetItem.call(this, key, value);
+            }
+          };
+
+          Storage.prototype.getItem = function (key) {
+            var value = origGetItem.call(this, key);
+            if (key === PROMPT_KEY && value) {
+              try {
+                var prompts = JSON.parse(value);
+                return JSON.stringify(prompts.map(function (p) {
+                  if (p.image === '__img__' && imageCache[p.id]) {
+                    return Object.assign({}, p, { image: imageCache[p.id] });
+                  }
+                  return p;
+                }));
+              } catch (e) {}
+            }
+            return value;
+          };
+        }
+
+        var s = document.createElement('script');
+        s.type = 'module';
+        s.crossOrigin = '';
+        s.src = '/Promptweb/assets/index-sAspD8aA.js';
+        document.head.appendChild(s);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
