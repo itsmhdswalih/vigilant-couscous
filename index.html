@@ -21,18 +21,36 @@
         var API_BASE = 'https://api.github.com/repos/' + REPO_OWNER + '/' + REPO_NAME + '/contents';
         var shaCache = {};
         var pushTimer = null;
+        var isPushingToGH = false;
+        var lastGHPromptCount = 0;
+
+        // Keep original storage methods untouched for internal use
+        var origSetItem = Storage.prototype.setItem;
+        var origGetItem = Storage.prototype.getItem;
+
+        // --- Double confirmation for window.confirm (catches delete dialogs) ---
+        var origConfirm = window.confirm;
+        window.confirm = function(msg) {
+          var first = origConfirm.call(window, msg);
+          if (first) {
+            return origConfirm.call(window, 'ഉറപ്പാണോ? ഇത് permanent ആയി delete ആകും — GitHub-ലും remove ആകും.');
+          }
+          return false;
+        };
 
         // --- Setup: admin visits ?setup=TOKEN once ---
         try {
           var params = new URLSearchParams(window.location.search);
           if (params.has('setup')) {
-            localStorage.setItem(TOK_KEY, params.get('setup'));
+            origSetItem.call(localStorage, TOK_KEY, params.get('setup'));
             history.replaceState({}, '', window.location.pathname);
-            alert('Setup complete! GitHub token saved. You can now upload prompts and they will be visible to everyone.');
+            origConfirm.call(window, 'Setup complete! GitHub token saved. Uploads will now be visible to everyone.');
           }
         } catch (e) {}
 
-        function getToken() { try { return localStorage.getItem(TOK_KEY); } catch(e) { return null; } }
+        function getToken() {
+          try { return origGetItem.call(localStorage, TOK_KEY); } catch(e) { return null; }
+        }
 
         // --- GitHub API helpers ---
         async function ghGet(path) {
@@ -53,15 +71,23 @@
           return null;
         }
 
-        async function ghPut(path, content, sha, message) {
+        async function ghPutJSON(path, content, sha, message) {
           try {
             var tok = getToken();
             if (!tok) return false;
-            var body = { message: message || 'Update', content: btoa(unescape(encodeURIComponent(content))), branch: BRANCH };
+            var body = {
+              message: message || 'Update ' + path,
+              content: btoa(unescape(encodeURIComponent(content))),
+              branch: BRANCH
+            };
             if (sha) body.sha = sha;
             var r = await fetch(API_BASE + '/' + path, {
               method: 'PUT',
-              headers: { 'Authorization': 'token ' + tok, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+              headers: {
+                'Authorization': 'token ' + tok,
+                'Accept': 'application/vnd.github.v3+json',
+                'Content-Type': 'application/json'
+              },
               body: JSON.stringify(body)
             });
             if (r.ok) { shaCache[path] = null; return true; }
@@ -77,7 +103,11 @@
             if (sha) body.sha = sha;
             var r = await fetch(API_BASE + '/' + path, {
               method: 'PUT',
-              headers: { 'Authorization': 'token ' + tok, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+              headers: {
+                'Authorization': 'token ' + tok,
+                'Accept': 'application/vnd.github.v3+json',
+                'Content-Type': 'application/json'
+              },
               body: JSON.stringify(body)
             });
             if (!r.ok) return null;
@@ -86,7 +116,7 @@
           } catch(e) { return null; }
         }
 
-        // --- Compress image to max ~1.5MB for GitHub ---
+        // --- Compress image to ~1.5MB for GitHub upload ---
         function compressImage(dataUrl) {
           return new Promise(function(resolve) {
             try {
@@ -117,87 +147,110 @@
           });
         }
 
-        // --- Fetch prompts from GitHub and populate localStorage ---
-        try {
-          var ghRes = await fetch(RAW_BASE + '/data/prompts.json?_=' + Date.now(), { cache: 'no-store' });
-          if (ghRes.ok) {
-            var ghData = await ghRes.json();
-            if (Array.isArray(ghData) && ghData.length > 0) {
-              localStorage.setItem(PROMPT_KEY, JSON.stringify(ghData));
-            } else if (Array.isArray(ghData) && ghData.length === 0) {
-              // GitHub empty — if admin has local data, migrate it to GitHub
-              var localRaw = localStorage.getItem(PROMPT_KEY);
-              if (localRaw && getToken()) {
-                try {
-                  var localPrompts = JSON.parse(localRaw);
-                  if (localPrompts && localPrompts.length > 0) {
-                    var sha0 = await getSha('data/prompts.json');
-                    await ghPut('data/prompts.json', JSON.stringify(localPrompts, null, 2), sha0, 'Migrate existing prompts');
-                  }
-                } catch(e2) {}
-              }
-            }
-          }
-        } catch(e) {}
+        // --- Push prompts + images to GitHub ---
+        async function pushToGitHub(rawValue) {
+          if (isPushingToGH) return;
+          isPushingToGH = true;
+          try {
+            var prompts = JSON.parse(rawValue);
+            if (!Array.isArray(prompts)) return;
 
-        // --- Poll GitHub every 90 seconds for new content (for visitors) ---
-        setInterval(async function() {
+            // Upload any base64 images to GitHub, replace with raw URLs
+            var processed = await Promise.all(prompts.map(async function(p) {
+              if (p.image && typeof p.image === 'string' && p.image.startsWith('data:image')) {
+                try {
+                  var compressed = await compressImage(p.image);
+                  var ext = (compressed.match(/data:image\/(\w+)/) || [])[1] || 'jpg';
+                  var imgPath = 'data/images/' + p.id + '.' + ext;
+                  var base64Data = compressed.split(',')[1];
+                  var imgSha = await getSha(imgPath);
+                  var url = await ghPutBinary(imgPath, base64Data, imgSha, 'Upload image ' + p.id);
+                  if (url) {
+                    return Object.assign({}, p, { image: url });
+                  }
+                } catch(imgErr) {}
+              }
+              return p;
+            }));
+
+            // Push prompts JSON
+            var sha = await getSha('data/prompts.json');
+            var ok = await ghPutJSON(
+              'data/prompts.json',
+              JSON.stringify(processed, null, 2),
+              sha,
+              processed.length < lastGHPromptCount ? 'Delete prompt' : 'Update prompts'
+            );
+
+            if (ok) {
+              lastGHPromptCount = processed.length;
+              // Update localStorage with processed (GitHub URL) prompts using origSetItem
+              origSetItem.call(localStorage, PROMPT_KEY, JSON.stringify(processed));
+            }
+          } catch(e) {
+            console.error('GitHub sync error:', e);
+          } finally {
+            isPushingToGH = false;
+          }
+        }
+
+        // --- Fetch prompts from GitHub ---
+        async function fetchFromGitHub() {
           try {
             var r = await fetch(RAW_BASE + '/data/prompts.json?_=' + Date.now(), { cache: 'no-store' });
-            if (r.ok) {
-              var d = await r.json();
-              if (Array.isArray(d) && d.length > 0) {
-                localStorage.setItem(PROMPT_KEY, JSON.stringify(d));
-              }
+            if (!r.ok) return null;
+            return await r.json();
+          } catch(e) { return null; }
+        }
+
+        // --- Initial load: get data from GitHub ---
+        var ghData = await fetchFromGitHub();
+        if (ghData && Array.isArray(ghData)) {
+          if (ghData.length > 0) {
+            lastGHPromptCount = ghData.length;
+            // Use origSetItem so we don't trigger a push-back to GitHub
+            origSetItem.call(localStorage, PROMPT_KEY, JSON.stringify(ghData));
+          } else {
+            // GitHub empty — if admin has local data, migrate to GitHub
+            var localRaw = origGetItem.call(localStorage, PROMPT_KEY);
+            if (localRaw && getToken()) {
+              try {
+                var localPrompts = JSON.parse(localRaw);
+                if (localPrompts && localPrompts.length > 0) {
+                  await pushToGitHub(localRaw);
+                }
+              } catch(e2) {}
             }
-          } catch(e) {}
+          }
+        }
+
+        // --- Poll GitHub every 90s (use origSetItem to avoid push loop) ---
+        setInterval(async function() {
+          if (isPushingToGH) return; // don't poll while admin is pushing
+          var latest = await fetchFromGitHub();
+          if (latest && Array.isArray(latest) && latest.length > 0) {
+            lastGHPromptCount = latest.length;
+            origSetItem.call(localStorage, PROMPT_KEY, JSON.stringify(latest));
+          }
         }, 90000);
 
-        // --- Intercept localStorage writes to sync to GitHub ---
-        var origSetItem = Storage.prototype.setItem;
-        var origGetItem = Storage.prototype.getItem;
-
+        // --- Intercept localStorage writes — only push when React app writes ---
         Storage.prototype.setItem = function(key, value) {
           origSetItem.call(this, key, value);
           if (key === PROMPT_KEY && getToken()) {
             clearTimeout(pushTimer);
-            var self = this;
-            pushTimer = setTimeout(async function() {
-              try {
-                var prompts = JSON.parse(value);
-                if (!Array.isArray(prompts)) return;
-
-                // Process each prompt: upload base64 images to GitHub
-                var processed = await Promise.all(prompts.map(async function(p) {
-                  if (p.image && typeof p.image === 'string' && p.image.startsWith('data:image')) {
-                    try {
-                      var compressed = await compressImage(p.image);
-                      var ext = (compressed.match(/data:image\/(\w+)/) || [])[1] || 'jpg';
-                      var imgPath = 'data/images/' + p.id + '.' + ext;
-                      var base64Data = compressed.split(',')[1];
-                      var imgSha = await getSha(imgPath);
-                      var url = await ghPutBinary(imgPath, base64Data, imgSha, 'Upload image ' + p.id);
-                      if (url) {
-                        return Object.assign({}, p, { image: url });
-                      }
-                    } catch(imgErr) {}
-                  }
-                  return p;
-                }));
-
-                var sha = await getSha('data/prompts.json');
-                var ok = await ghPut('data/prompts.json', JSON.stringify(processed, null, 2), sha, 'Update prompts');
-                if (ok) {
-                  origSetItem.call(localStorage, PROMPT_KEY, JSON.stringify(processed));
-                }
-              } catch(e) {
-                console.error('GitHub sync error:', e);
-              }
-            }, 800);
+            var val = value;
+            pushTimer = setTimeout(function() {
+              pushToGitHub(val);
+            }, 600);
           }
         };
 
-        // Load the React bundle
+        Storage.prototype.getItem = function(key) {
+          return origGetItem.call(this, key);
+        };
+
+        // --- Load React bundle ---
         var s = document.createElement('script');
         s.type = 'module';
         s.crossOrigin = '';
