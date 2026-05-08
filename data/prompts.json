@@ -11,6 +11,18 @@
     "id": "dutsx18bx"
   },
   {
+    "id": "1",
+    "title": "Cyberpunk Portraits",
+    "emoji": "🤖",
+    "text": "A hyper-realistic cyberpunk portrait of a futuristic android, intricate mechanical details, glowing neon circuits, volumetric lighting, 8k resolution, cinematic atmosphere.",
+    "tags": [
+      "ai-art",
+      "midjourney",
+      "cyberpunk"
+    ],
+    "ratio": "16:9"
+  },
+  {
     "id": "2",
     "title": "Viral Reel Script",
     "emoji": "📱",
@@ -21,5 +33,16 @@
       "scripts"
     ],
     "ratio": "9:16"
+  },
+  {
+    "id": "3",
+    "title": "Minimalist Interior",
+    "emoji": "🏠",
+    "text": "Modern minimalist living room interior with large windows, soft natural sunlight, Scandinavian furniture, neutral color palette, architectural digest style.",
+    "tags": [
+      "design",
+      "interior"
+    ],
+    "ratio": "16:9"
   }
 ]
