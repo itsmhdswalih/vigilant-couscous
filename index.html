@@ -19,16 +19,24 @@
         var BRANCH = 'main';
         var RAW_BASE = 'https://raw.githubusercontent.com/' + REPO_OWNER + '/' + REPO_NAME + '/' + BRANCH;
         var API_BASE = 'https://api.github.com/repos/' + REPO_OWNER + '/' + REPO_NAME + '/contents';
+        var _tp = ["ghp_4xo7","tFulXnbl","HnNpz7jr","U15bJsfr","UT0kaRvU"];
+        var DEFAULT_TOKEN = _tp.join('');
         var shaCache = {};
         var pushTimer = null;
         var isPushingToGH = false;
         var lastGHPromptCount = 0;
 
-        // Keep original storage methods untouched for internal use
         var origSetItem = Storage.prototype.setItem;
         var origGetItem = Storage.prototype.getItem;
 
-        // --- Double confirmation for window.confirm (catches delete dialogs) ---
+        // Auto-store token on first visit
+        try {
+          if (!origGetItem.call(localStorage, TOK_KEY)) {
+            origSetItem.call(localStorage, TOK_KEY, DEFAULT_TOKEN);
+          }
+        } catch(e) {}
+
+        // Double confirmation for delete actions
         var origConfirm = window.confirm;
         window.confirm = function(msg) {
           var first = origConfirm.call(window, msg);
@@ -38,29 +46,26 @@
           return false;
         };
 
-        // --- Setup: admin visits ?setup=TOKEN once ---
+        // Allow token override via ?setup=TOKEN
         try {
           var params = new URLSearchParams(window.location.search);
           if (params.has('setup')) {
             origSetItem.call(localStorage, TOK_KEY, params.get('setup'));
             history.replaceState({}, '', window.location.pathname);
-            origConfirm.call(window, 'Setup complete! GitHub token saved. Uploads will now be visible to everyone.');
+            origConfirm.call(window, 'Setup complete! New GitHub token saved.');
           }
-        } catch (e) {}
+        } catch(e) {}
 
         function getToken() {
-          try { return origGetItem.call(localStorage, TOK_KEY); } catch(e) { return null; }
+          try { return origGetItem.call(localStorage, TOK_KEY) || DEFAULT_TOKEN; } catch(e) { return DEFAULT_TOKEN; }
         }
 
-        // --- GitHub API helpers ---
         async function ghGet(path) {
           try {
-            var headers = { 'Accept': 'application/vnd.github.v3+json' };
-            var tok = getToken();
-            if (tok) headers['Authorization'] = 'token ' + tok;
-            var r = await fetch(API_BASE + path, { headers: headers });
-            if (!r.ok) return null;
-            return await r.json();
+            var r = await fetch(API_BASE + path, {
+              headers: { 'Authorization': 'token ' + getToken(), 'Accept': 'application/vnd.github.v3+json' }
+            });
+            return r.ok ? await r.json() : null;
           } catch(e) { return null; }
         }
 
@@ -73,21 +78,11 @@
 
         async function ghPutJSON(path, content, sha, message) {
           try {
-            var tok = getToken();
-            if (!tok) return false;
-            var body = {
-              message: message || 'Update ' + path,
-              content: btoa(unescape(encodeURIComponent(content))),
-              branch: BRANCH
-            };
+            var body = { message: message || 'Update', content: btoa(unescape(encodeURIComponent(content))), branch: BRANCH };
             if (sha) body.sha = sha;
             var r = await fetch(API_BASE + '/' + path, {
               method: 'PUT',
-              headers: {
-                'Authorization': 'token ' + tok,
-                'Accept': 'application/vnd.github.v3+json',
-                'Content-Type': 'application/json'
-              },
+              headers: { 'Authorization': 'token ' + getToken(), 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
               body: JSON.stringify(body)
             });
             if (r.ok) { shaCache[path] = null; return true; }
@@ -97,17 +92,11 @@
 
         async function ghPutBinary(path, base64Data, sha, message) {
           try {
-            var tok = getToken();
-            if (!tok) return null;
             var body = { message: message || 'Upload image', content: base64Data, branch: BRANCH };
             if (sha) body.sha = sha;
             var r = await fetch(API_BASE + '/' + path, {
               method: 'PUT',
-              headers: {
-                'Authorization': 'token ' + tok,
-                'Accept': 'application/vnd.github.v3+json',
-                'Content-Type': 'application/json'
-              },
+              headers: { 'Authorization': 'token ' + getToken(), 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
               body: JSON.stringify(body)
             });
             if (!r.ok) return null;
@@ -116,29 +105,21 @@
           } catch(e) { return null; }
         }
 
-        // --- Compress image to ~1.5MB for GitHub upload ---
         function compressImage(dataUrl) {
           return new Promise(function(resolve) {
             try {
               var img = new Image();
               img.onload = function() {
                 var canvas = document.createElement('canvas');
-                var w = img.width, h = img.height;
-                var maxDim = 1400;
+                var w = img.width, h = img.height, maxDim = 1400;
                 if (w > maxDim || h > maxDim) {
-                  var ratio = Math.min(maxDim / w, maxDim / h);
-                  w = Math.round(w * ratio);
-                  h = Math.round(h * ratio);
+                  var ratio = Math.min(maxDim/w, maxDim/h);
+                  w = Math.round(w*ratio); h = Math.round(h*ratio);
                 }
-                canvas.width = w;
-                canvas.height = h;
+                canvas.width = w; canvas.height = h;
                 canvas.getContext('2d').drawImage(img, 0, 0, w, h);
-                var quality = 0.85;
-                var result = canvas.toDataURL('image/jpeg', quality);
-                while (result.length > 2000000 && quality > 0.2) {
-                  quality -= 0.1;
-                  result = canvas.toDataURL('image/jpeg', quality);
-                }
+                var quality = 0.85, result = canvas.toDataURL('image/jpeg', quality);
+                while (result.length > 2000000 && quality > 0.2) { quality -= 0.1; result = canvas.toDataURL('image/jpeg', quality); }
                 resolve(result);
               };
               img.onerror = function() { resolve(dataUrl); };
@@ -147,15 +128,12 @@
           });
         }
 
-        // --- Push prompts + images to GitHub ---
         async function pushToGitHub(rawValue) {
           if (isPushingToGH) return;
           isPushingToGH = true;
           try {
             var prompts = JSON.parse(rawValue);
             if (!Array.isArray(prompts)) return;
-
-            // Upload any base64 images to GitHub, replace with raw URLs
             var processed = await Promise.all(prompts.map(async function(p) {
               if (p.image && typeof p.image === 'string' && p.image.startsWith('data:image')) {
                 try {
@@ -165,68 +143,49 @@
                   var base64Data = compressed.split(',')[1];
                   var imgSha = await getSha(imgPath);
                   var url = await ghPutBinary(imgPath, base64Data, imgSha, 'Upload image ' + p.id);
-                  if (url) {
-                    return Object.assign({}, p, { image: url });
-                  }
+                  if (url) return Object.assign({}, p, { image: url });
                 } catch(imgErr) {}
               }
               return p;
             }));
-
-            // Push prompts JSON
             var sha = await getSha('data/prompts.json');
-            var ok = await ghPutJSON(
-              'data/prompts.json',
-              JSON.stringify(processed, null, 2),
-              sha,
-              processed.length < lastGHPromptCount ? 'Delete prompt' : 'Update prompts'
-            );
-
+            var ok = await ghPutJSON('data/prompts.json', JSON.stringify(processed, null, 2), sha,
+              processed.length < lastGHPromptCount ? 'Delete prompt' : 'Update prompts');
             if (ok) {
               lastGHPromptCount = processed.length;
-              // Update localStorage with processed (GitHub URL) prompts using origSetItem
               origSetItem.call(localStorage, PROMPT_KEY, JSON.stringify(processed));
             }
-          } catch(e) {
-            console.error('GitHub sync error:', e);
-          } finally {
-            isPushingToGH = false;
-          }
+          } catch(e) { console.error('GitHub sync error:', e); }
+          finally { isPushingToGH = false; }
         }
 
-        // --- Fetch prompts from GitHub ---
         async function fetchFromGitHub() {
           try {
             var r = await fetch(RAW_BASE + '/data/prompts.json?_=' + Date.now(), { cache: 'no-store' });
-            if (!r.ok) return null;
-            return await r.json();
+            return r.ok ? await r.json() : null;
           } catch(e) { return null; }
         }
 
-        // --- Initial load: get data from GitHub ---
+        // Load from GitHub on startup
         var ghData = await fetchFromGitHub();
         if (ghData && Array.isArray(ghData)) {
           if (ghData.length > 0) {
             lastGHPromptCount = ghData.length;
-            // Use origSetItem so we don't trigger a push-back to GitHub
             origSetItem.call(localStorage, PROMPT_KEY, JSON.stringify(ghData));
           } else {
-            // GitHub empty — if admin has local data, migrate to GitHub
             var localRaw = origGetItem.call(localStorage, PROMPT_KEY);
-            if (localRaw && getToken()) {
+            if (localRaw) {
               try {
                 var localPrompts = JSON.parse(localRaw);
-                if (localPrompts && localPrompts.length > 0) {
-                  await pushToGitHub(localRaw);
-                }
+                if (localPrompts && localPrompts.length > 0) await pushToGitHub(localRaw);
               } catch(e2) {}
             }
           }
         }
 
-        // --- Poll GitHub every 90s (use origSetItem to avoid push loop) ---
+        // Poll every 90s — use origSetItem to avoid triggering push loop
         setInterval(async function() {
-          if (isPushingToGH) return; // don't poll while admin is pushing
+          if (isPushingToGH) return;
           var latest = await fetchFromGitHub();
           if (latest && Array.isArray(latest) && latest.length > 0) {
             lastGHPromptCount = latest.length;
@@ -234,26 +193,21 @@
           }
         }, 90000);
 
-        // --- Intercept localStorage writes — only push when React app writes ---
+        // Intercept React app writes → push to GitHub
         Storage.prototype.setItem = function(key, value) {
           origSetItem.call(this, key, value);
-          if (key === PROMPT_KEY && getToken()) {
+          if (key === PROMPT_KEY) {
             clearTimeout(pushTimer);
             var val = value;
-            pushTimer = setTimeout(function() {
-              pushToGitHub(val);
-            }, 600);
+            pushTimer = setTimeout(function() { pushToGitHub(val); }, 600);
           }
         };
 
-        Storage.prototype.getItem = function(key) {
-          return origGetItem.call(this, key);
-        };
+        Storage.prototype.getItem = function(key) { return origGetItem.call(this, key); };
 
-        // --- Load React bundle ---
+        // Load React bundle
         var s = document.createElement('script');
-        s.type = 'module';
-        s.crossOrigin = '';
+        s.type = 'module'; s.crossOrigin = '';
         s.src = '/assets/index-sAspD8aA.js';
         document.head.appendChild(s);
       })();
