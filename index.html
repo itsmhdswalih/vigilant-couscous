@@ -25,9 +25,11 @@
         var pushTimer = null;
         var isPushingToGH = false;
         var lastGHPromptCount = 0;
+        var lastPushTime = 0;
 
         var origSetItem = Storage.prototype.setItem;
         var origGetItem = Storage.prototype.getItem;
+        var origConfirm = window.confirm;
 
         // Auto-store token on first visit
         try {
@@ -35,16 +37,6 @@
             origSetItem.call(localStorage, TOK_KEY, DEFAULT_TOKEN);
           }
         } catch(e) {}
-
-        // Double confirmation for delete actions
-        var origConfirm = window.confirm;
-        window.confirm = function(msg) {
-          var first = origConfirm.call(window, msg);
-          if (first) {
-            return origConfirm.call(window, 'ഉറപ്പാണോ? ഇത് permanent ആയി delete ആകും — GitHub-ലും remove ആകും.');
-          }
-          return false;
-        };
 
         // Allow token override via ?setup=TOKEN
         try {
@@ -60,6 +52,7 @@
           try { return origGetItem.call(localStorage, TOK_KEY) || DEFAULT_TOKEN; } catch(e) { return DEFAULT_TOKEN; }
         }
 
+        // --- GitHub API helpers ---
         async function ghGet(path) {
           try {
             var r = await fetch(API_BASE + path, {
@@ -128,9 +121,10 @@
           });
         }
 
-        async function pushToGitHub(rawValue) {
+        async function pushToGitHub(rawValue, isDelete) {
           if (isPushingToGH) return;
           isPushingToGH = true;
+          lastPushTime = Date.now();
           try {
             var prompts = JSON.parse(rawValue);
             if (!Array.isArray(prompts)) return;
@@ -148,9 +142,15 @@
               }
               return p;
             }));
+            // Always get fresh SHA before push
+            shaCache['data/prompts.json'] = null;
             var sha = await getSha('data/prompts.json');
-            var ok = await ghPutJSON('data/prompts.json', JSON.stringify(processed, null, 2), sha,
-              processed.length < lastGHPromptCount ? 'Delete prompt' : 'Update prompts');
+            var ok = await ghPutJSON(
+              'data/prompts.json',
+              JSON.stringify(processed, null, 2),
+              sha,
+              isDelete ? 'Delete prompt' : 'Update prompts'
+            );
             if (ok) {
               lastGHPromptCount = processed.length;
               origSetItem.call(localStorage, PROMPT_KEY, JSON.stringify(processed));
@@ -177,15 +177,17 @@
             if (localRaw) {
               try {
                 var localPrompts = JSON.parse(localRaw);
-                if (localPrompts && localPrompts.length > 0) await pushToGitHub(localRaw);
+                if (localPrompts && localPrompts.length > 0) await pushToGitHub(localRaw, false);
               } catch(e2) {}
             }
           }
         }
 
-        // Poll every 90s — use origSetItem to avoid triggering push loop
+        // Poll every 90s — skip if we just pushed (avoid CDN cache overwrite)
         setInterval(async function() {
           if (isPushingToGH) return;
+          // Skip poll for 3 minutes after a push (GitHub CDN cache window)
+          if (Date.now() - lastPushTime < 180000) return;
           var latest = await fetchFromGitHub();
           if (latest && Array.isArray(latest) && latest.length > 0) {
             lastGHPromptCount = latest.length;
@@ -193,13 +195,46 @@
           }
         }, 90000);
 
-        // Intercept React app writes → push to GitHub
+        // --- Intercept localStorage writes ---
         Storage.prototype.setItem = function(key, value) {
-          origSetItem.call(this, key, value);
           if (key === PROMPT_KEY) {
+            try {
+              var oldRaw = origGetItem.call(localStorage, PROMPT_KEY);
+              var oldArr = oldRaw ? JSON.parse(oldRaw) : [];
+              var newArr = JSON.parse(value);
+
+              // Deletion detected — show double confirmation
+              if (Array.isArray(newArr) && Array.isArray(oldArr) && newArr.length < oldArr.length) {
+                var ok1 = origConfirm.call(window, 'ഈ prompt delete ചെയ്യണോ? (Delete this prompt?)');
+                if (!ok1) {
+                  // User cancelled — restore old data and reload
+                  origSetItem.call(localStorage, PROMPT_KEY, oldRaw);
+                  setTimeout(function() { window.location.reload(); }, 50);
+                  return;
+                }
+                var ok2 = origConfirm.call(window, 'ഉറപ്പാണോ? ഇത് GitHub-ലും permanent ആയി delete ആകും. (Are you sure? This will permanently delete from GitHub too.)');
+                if (!ok2) {
+                  // User cancelled second — restore old data and reload
+                  origSetItem.call(localStorage, PROMPT_KEY, oldRaw);
+                  setTimeout(function() { window.location.reload(); }, 50);
+                  return;
+                }
+                // Confirmed deletion
+                origSetItem.call(this, key, value);
+                clearTimeout(pushTimer);
+                var val = value;
+                pushTimer = setTimeout(function() { pushToGitHub(val, true); }, 600);
+                return;
+              }
+            } catch(e) {}
+
+            // Normal write (add/update)
+            origSetItem.call(this, key, value);
             clearTimeout(pushTimer);
-            var val = value;
-            pushTimer = setTimeout(function() { pushToGitHub(val); }, 600);
+            var val2 = value;
+            pushTimer = setTimeout(function() { pushToGitHub(val2, false); }, 600);
+          } else {
+            origSetItem.call(this, key, value);
           }
         };
 
