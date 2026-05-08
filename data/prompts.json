@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "title": "Blurred World, Sharp Presence",
+    "text": "Today a male model in a white suit stands out from the blurry people wearing turtlenecks and trousers, posing for the cover. the minimalist style captures his elegance with soft lighting, highlighting every detail of his face. he is surrounded by blurred figures dressed in suits, creating an atmosphere reminiscent of vogue magazine covers. her confident gaze adds to the overall visual appeal, making it stand out among other models on social media.",
+    "emoji": "",
+    "tags": [
+      "minimalstyle",
+      "editorial"
+    ],
+    "image": "https://raw.githubusercontent.com/itsmhdswalih/vigilant-couscous/main/data/images/r9jo6h6p3.jpeg",
+    "ratio": "3:4",
+    "id": "r9jo6h6p3"
+  },
+  {
+    "title": "Alone With the Horizon",
+    "text": "A surreal cinematic landscape featuring a single wooden chair placed alone in the middle of a massive endless green grass field under a soft pastel sky during late afternoon. A young man is sitting naturally on the chair, slightly turned toward the right side while looking far into the distant horizon. His face is partially visible from a side angle, showing a calm emotional expression.\n\nThe environment feels quiet, lonely, nostalgic, and dreamlike. The grass is highly detailed with soft natural wind movement and realistic texture stretching endlessly toward the horizon line. Wide open empty atmosphere with minimal composition.\n\nThe subject wears simple casual clothing in dark muted tones, blending naturally into the peaceful environment. His posture feels thoughtful and introspective, one hand resting casually while sitting relaxed on the chair.\n\nLighting is soft natural golden-hour daylight with subtle shadows across the grass. Sky contains soft clouds with pale blue and warm cream tones. Cinematic color grading with slightly desaturated natural colors, realistic contrast, soft highlights, and gentle film-like texture.\n\nShot in a wide-angle composition with the chair centered in the frame and the subject appearing small compared to the massive empty landscape, creating emotional isolation and visual depth.\n\nUltra realistic photography style, dreamy cinematic atmosphere, minimal aesthetic, emotional storytelling composition, shallow atmospheric haze, realistic grass texture, peaceful surrealism, 35mm film look, natural lighting, highly detailed environment, professional landscape photography --ar 9:16\n\nNegative prompt: crowded background, city, buildings, cartoon, anime, CGI, extra chairs, fantasy creatures, unrealistic sky, overexposed lighting, cyberpunk colors, blurry subject, distorted anatomy, text, watermark",
+    "emoji": "",
+    "tags": [
+      "CinematicPhotography"
+    ],
+    "image": "https://raw.githubusercontent.com/itsmhdswalih/vigilant-couscous/main/data/images/dutsx18bx.jpeg",
+    "ratio": "9:16",
+    "id": "dutsx18bx"
+  }
+]
