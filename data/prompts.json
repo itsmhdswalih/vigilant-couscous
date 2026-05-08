@@ -9,5 +9,28 @@
     "image": "https://raw.githubusercontent.com/itsmhdswalih/vigilant-couscous/main/data/images/dutsx18bx.jpeg",
     "ratio": "9:16",
     "id": "dutsx18bx"
+  },
+  {
+    "id": "2",
+    "title": "Viral Reel Script",
+    "emoji": "📱",
+    "text": "Generate a high-retention 30-second reel script for a travel vlogger visiting Bali. Include hook, transitions, and call-to-action that encourages comments.",
+    "tags": [
+      "creators",
+      "reels",
+      "scripts"
+    ],
+    "ratio": "9:16"
+  },
+  {
+    "id": "3",
+    "title": "Minimalist Interior",
+    "emoji": "🏠",
+    "text": "Modern minimalist living room interior with large windows, soft natural sunlight, Scandinavian furniture, neutral color palette, architectural digest style.",
+    "tags": [
+      "design",
+      "interior"
+    ],
+    "ratio": "16:9"
   }
 ]
