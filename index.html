@@ -21,24 +21,24 @@
         var API_BASE = 'https://api.github.com/repos/' + REPO_OWNER + '/' + REPO_NAME + '/contents';
         var _tp = ["ghp_4xo7","tFulXnbl","HnNpz7jr","U15bJsfr","UT0kaRvU"];
         var DEFAULT_TOKEN = _tp.join('');
-        var shaCache = {};
+
+        var isPushing = false;
+        var pendingPush = null; // queued push: {value, isDelete}
         var pushTimer = null;
-        var isPushingToGH = false;
-        var lastGHPromptCount = 0;
         var lastPushTime = 0;
 
         var origSetItem = Storage.prototype.setItem;
         var origGetItem = Storage.prototype.getItem;
         var origConfirm = window.confirm;
 
-        // Auto-store token on first visit
+        // Auto-store token
         try {
           if (!origGetItem.call(localStorage, TOK_KEY)) {
             origSetItem.call(localStorage, TOK_KEY, DEFAULT_TOKEN);
           }
         } catch(e) {}
 
-        // Allow token override via ?setup=TOKEN
+        // Allow token override
         try {
           var params = new URLSearchParams(window.location.search);
           if (params.has('setup')) {
@@ -52,7 +52,6 @@
           try { return origGetItem.call(localStorage, TOK_KEY) || DEFAULT_TOKEN; } catch(e) { return DEFAULT_TOKEN; }
         }
 
-        // --- GitHub API helpers ---
         async function ghGet(path) {
           try {
             var r = await fetch(API_BASE + path, {
@@ -62,11 +61,9 @@
           } catch(e) { return null; }
         }
 
-        async function getSha(path) {
-          if (shaCache[path]) return shaCache[path];
+        async function getFreshSha(path) {
           var info = await ghGet('/' + path);
-          if (info && info.sha) { shaCache[path] = info.sha; return info.sha; }
-          return null;
+          return (info && info.sha) ? info.sha : null;
         }
 
         async function ghPutJSON(path, content, sha, message) {
@@ -78,22 +75,33 @@
               headers: { 'Authorization': 'token ' + getToken(), 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
               body: JSON.stringify(body)
             });
-            if (r.ok) { shaCache[path] = null; return true; }
+            if (r.ok) return true;
+            // On conflict (409), retry with fresh SHA
+            if (r.status === 409) {
+              var freshSha = await getFreshSha(path);
+              body.sha = freshSha;
+              var r2 = await fetch(API_BASE + '/' + path, {
+                method: 'PUT',
+                headers: { 'Authorization': 'token ' + getToken(), 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+                body: JSON.stringify(body)
+              });
+              return r2.ok;
+            }
             return false;
           } catch(e) { return false; }
         }
 
-        async function ghPutBinary(path, base64Data, sha, message) {
+        async function ghPutBinary(path, base64Data, message) {
           try {
+            var existingInfo = await ghGet('/' + path);
             var body = { message: message || 'Upload image', content: base64Data, branch: BRANCH };
-            if (sha) body.sha = sha;
+            if (existingInfo && existingInfo.sha) body.sha = existingInfo.sha;
             var r = await fetch(API_BASE + '/' + path, {
               method: 'PUT',
               headers: { 'Authorization': 'token ' + getToken(), 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
               body: JSON.stringify(body)
             });
             if (!r.ok) return null;
-            shaCache[path] = null;
             return RAW_BASE + '/' + path;
           } catch(e) { return null; }
         }
@@ -121,13 +129,14 @@
           });
         }
 
-        async function pushToGitHub(rawValue, isDelete) {
-          if (isPushingToGH) return;
-          isPushingToGH = true;
+        // Core push function — always runs to completion, then checks for queued push
+        async function doPush(rawValue, isDelete) {
+          isPushing = true;
           lastPushTime = Date.now();
           try {
             var prompts = JSON.parse(rawValue);
             if (!Array.isArray(prompts)) return;
+
             var processed = await Promise.all(prompts.map(async function(p) {
               if (p.image && typeof p.image === 'string' && p.image.startsWith('data:image')) {
                 try {
@@ -135,28 +144,43 @@
                   var ext = (compressed.match(/data:image\/(\w+)/) || [])[1] || 'jpg';
                   var imgPath = 'data/images/' + p.id + '.' + ext;
                   var base64Data = compressed.split(',')[1];
-                  var imgSha = await getSha(imgPath);
-                  var url = await ghPutBinary(imgPath, base64Data, imgSha, 'Upload image ' + p.id);
+                  var url = await ghPutBinary(imgPath, base64Data, 'Upload image ' + p.id);
                   if (url) return Object.assign({}, p, { image: url });
                 } catch(imgErr) {}
               }
               return p;
             }));
-            // Always get fresh SHA before push
-            shaCache['data/prompts.json'] = null;
-            var sha = await getSha('data/prompts.json');
+
+            // Always get fresh SHA (never use cache) to avoid 409 conflicts
+            var sha = await getFreshSha('data/prompts.json');
             var ok = await ghPutJSON(
               'data/prompts.json',
               JSON.stringify(processed, null, 2),
               sha,
-              isDelete ? 'Delete prompt' : 'Update prompts'
+              isDelete ? 'Delete prompt' : (prompts.length + ' prompt(s) saved')
             );
             if (ok) {
-              lastGHPromptCount = processed.length;
               origSetItem.call(localStorage, PROMPT_KEY, JSON.stringify(processed));
             }
           } catch(e) { console.error('GitHub sync error:', e); }
-          finally { isPushingToGH = false; }
+          finally {
+            isPushing = false;
+            // If another push was queued while we were busy, run it now
+            if (pendingPush) {
+              var next = pendingPush;
+              pendingPush = null;
+              doPush(next.value, next.isDelete);
+            }
+          }
+        }
+
+        function schedulePush(value, isDelete) {
+          if (isPushing) {
+            // Queue this push — it will run after current push finishes
+            pendingPush = { value: value, isDelete: isDelete };
+            return;
+          }
+          doPush(value, isDelete);
         }
 
         async function fetchFromGitHub() {
@@ -170,32 +194,28 @@
         var ghData = await fetchFromGitHub();
         if (ghData && Array.isArray(ghData)) {
           if (ghData.length > 0) {
-            lastGHPromptCount = ghData.length;
             origSetItem.call(localStorage, PROMPT_KEY, JSON.stringify(ghData));
           } else {
             var localRaw = origGetItem.call(localStorage, PROMPT_KEY);
             if (localRaw) {
               try {
                 var localPrompts = JSON.parse(localRaw);
-                if (localPrompts && localPrompts.length > 0) await pushToGitHub(localRaw, false);
+                if (localPrompts && localPrompts.length > 0) await doPush(localRaw, false);
               } catch(e2) {}
             }
           }
         }
 
-        // Poll every 90s — skip if we just pushed (avoid CDN cache overwrite)
+        // Poll every 2 minutes — skip if we pushed recently (3 min window)
         setInterval(async function() {
-          if (isPushingToGH) return;
-          // Skip poll for 3 minutes after a push (GitHub CDN cache window)
-          if (Date.now() - lastPushTime < 180000) return;
+          if (isPushing || (Date.now() - lastPushTime < 180000)) return;
           var latest = await fetchFromGitHub();
           if (latest && Array.isArray(latest) && latest.length > 0) {
-            lastGHPromptCount = latest.length;
             origSetItem.call(localStorage, PROMPT_KEY, JSON.stringify(latest));
           }
-        }, 90000);
+        }, 120000);
 
-        // --- Intercept localStorage writes ---
+        // Intercept localStorage writes
         Storage.prototype.setItem = function(key, value) {
           if (key === PROMPT_KEY) {
             try {
@@ -203,36 +223,33 @@
               var oldArr = oldRaw ? JSON.parse(oldRaw) : [];
               var newArr = JSON.parse(value);
 
-              // Deletion detected — show double confirmation
+              // Deletion detected — double confirm
               if (Array.isArray(newArr) && Array.isArray(oldArr) && newArr.length < oldArr.length) {
-                var ok1 = origConfirm.call(window, 'ഈ prompt delete ചെയ്യണോ? (Delete this prompt?)');
+                var ok1 = origConfirm.call(window, 'ഈ prompt delete ചെയ്യണോ?\n(Delete this prompt?)');
                 if (!ok1) {
-                  // User cancelled — restore old data and reload
                   origSetItem.call(localStorage, PROMPT_KEY, oldRaw);
                   setTimeout(function() { window.location.reload(); }, 50);
                   return;
                 }
-                var ok2 = origConfirm.call(window, 'ഉറപ്പാണോ? ഇത് GitHub-ലും permanent ആയി delete ആകും. (Are you sure? This will permanently delete from GitHub too.)');
+                var ok2 = origConfirm.call(window, 'ഉറപ്പാണോ? GitHub-ലും permanent ആയി delete ആകും.\n(Sure? This permanently deletes from GitHub too.)');
                 if (!ok2) {
-                  // User cancelled second — restore old data and reload
                   origSetItem.call(localStorage, PROMPT_KEY, oldRaw);
                   setTimeout(function() { window.location.reload(); }, 50);
                   return;
                 }
-                // Confirmed deletion
                 origSetItem.call(this, key, value);
                 clearTimeout(pushTimer);
-                var val = value;
-                pushTimer = setTimeout(function() { pushToGitHub(val, true); }, 600);
+                var delVal = value;
+                pushTimer = setTimeout(function() { schedulePush(delVal, true); }, 600);
                 return;
               }
             } catch(e) {}
 
-            // Normal write (add/update)
+            // Normal add/update
             origSetItem.call(this, key, value);
             clearTimeout(pushTimer);
-            var val2 = value;
-            pushTimer = setTimeout(function() { pushToGitHub(val2, false); }, 600);
+            var addVal = value;
+            pushTimer = setTimeout(function() { schedulePush(addVal, false); }, 800);
           } else {
             origSetItem.call(this, key, value);
           }
