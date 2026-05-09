@@ -1,5 +1,17 @@
 [
   {
+    "title": "Passing Frames",
+    "text": "Use uploaded selfie as ONLY face reference; keep exact likeness, exact age, natural skin texture; no face mixing, no beautification. Ultra-realistic crowded crosswalk close-up portrait: subject centered, face and eyes tack-sharp, shoulders and upper chest visible; the subject stands still while a dense crowd surrounds them on all sides. Motion effect rule: ONE strong horizontal motion blur on the crowd only (left-to-right), creating flowing streaks around the subject; optional ONE subtle afterimage ghosting of the crowd only (very faint), no additional blur types. Subject remains perfectly in focus, direct eye contact into lens, calm steady expression. Outfit: chocolate-brown oversized bomber jacket, crisp white button-up shirt, brown tie worn slightly loose. Color grade: cold cinematic blue-cyan tone, lowered warmth, slightly desaturated, deep cool shadows, clean highlights with mild bloom, fine film grain, subtle vignette. Lighting: overcast daylight + cool city reflections. Camera: 85mm, f/2, shutter 1/20, ISO 800, focus locked on nearest eye. Background: busy city crowd, 3:4",
+    "emoji": "",
+    "tags": [
+      "motionblur",
+      "moodyedits"
+    ],
+    "image": "https://raw.githubusercontent.com/itsmhdswalih/vigilant-couscous/main/data/images/u8k131nlv.jpeg",
+    "ratio": "3:4",
+    "id": "u8k131nlv"
+  },
+  {
     "title": "Still Among Motion",
     "text": "Use uploaded selfie as ONLY face reference; keep exact likeness, age, natural skin texture; no face mixing, no beautification. Ultra-realistic subway platform close-up portrait; subject leans slightly toward camera, sharp in the foreground; commuters move past behind and beside them creating ONE strong diagonal tilt motion blur sweep from top-left to bottom-right; optional ONE subtle light trail from a passing phone screen only. Subject in focus, eyes locked to camera. Outfit (casual, no logos): chocolate-brown oversized bomber jacket, crisp white button-up shirt, brown tie worn slightly loose. Lighting: mixed fluorescent + warm tungsten reflections, warm film grade, halation, fine grain. Camera: 35mm, f/2, shutter 1/30, ISO 800. 3:4",
     "emoji": "",
