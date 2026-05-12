@@ -174,5 +174,1205 @@
     "image": "https://raw.githubusercontent.com/itsmhdswalih/vigilant-couscous/main/data/images/dutsx18bx.jpeg",
     "ratio": "9:16",
     "id": "dutsx18bx"
+  },
+  {
+    "title": "Golden Hour Silhouette",
+    "text": "A breathtaking silhouette of a lone figure standing on a cliff edge during golden hour. The sky is ablaze with deep oranges, burning reds, and soft purples. The person is small against the vast landscape, arms slightly raised, creating a powerful sense of freedom and contemplation. Sun is positioned low on the horizon, casting long dramatic shadows. Shot from ground level, wide angle lens, cinematic atmosphere. --ar 9:16 --style raw",
+    "emoji": "",
+    "tags": [
+      "GoldenHour",
+      "Silhouette"
+    ],
+    "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_001"
+  },
+  {
+    "title": "Neon Rain Street",
+    "text": "Cinematic street photography in a rain-soaked urban alley at night. Neon signs in electric pink and cyan reflect off the wet cobblestone. A lone figure in a dark trench coat walks away from camera, silhouetted against the glow. Steam rises from a drain cover. Ultra-realistic, anamorphic lens flare, film grain, Blade Runner aesthetic, moody atmosphere. Shot on Sony A7III with 35mm lens. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "NeonCity",
+      "RainyVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_002"
+  },
+  {
+    "title": "Misty Forest Awakening",
+    "text": "An ethereal misty forest at dawn with towering ancient trees. Soft golden light filters through the dense canopy in god rays. Ground covered in lush green moss and ferns dripping with morning dew. A winding dirt path leads into the foggy depths. Atmospheric perspective creates depth. Highly detailed textures, macro details on leaves, cinematic color grading, dreamlike quality. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "ForestMood",
+      "NatureVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_003"
+  },
+  {
+    "title": "Cyberpunk Portrait",
+    "text": "Close-up portrait of a young woman with cyberpunk aesthetics. Holographic tattoos glowing on her face, augmented reality glasses with data streams reflected in the lenses. Dramatic purple and cyan neon lighting from below. Futuristic urban background with towering screens and advertisements in Asian characters. Rain on her skin, high-tech accessories, confident expression. Ultra-detailed, 8K, cinematic. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "Cyberpunk",
+      "FutureFashion"
+    ],
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_004"
+  },
+  {
+    "title": "Aerial Ocean Cliff",
+    "text": "Stunning aerial drone shot of rugged coastal cliffs meeting a turquoise ocean. Waves crash dramatically against black volcanic rock formations creating white foam patterns. A narrow winding coastal path hugs the cliff edge. Late afternoon golden light casts long shadows across the textured landscape. Shot from 200m altitude, top-down 45-degree angle, ultra-wide field of view. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "AerialView",
+      "CoastalVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_005"
+  },
+  {
+    "title": "Smoke Art Portrait",
+    "text": "A dramatic portrait of a person surrounded by swirling colored smoke in deep purple and electric blue. The subject's face is sharp and stoic while the colorful smoke forms artistic patterns around them. Black background makes colors pop intensely. The smoke wraps around shoulders and face creating a mystical, goddess-like appearance. Studio lighting, high-speed freeze, macro smoke details. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "SmokeArt",
+      "ColorBurst"
+    ],
+    "image": "https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_006"
+  },
+  {
+    "title": "Abandoned Luxury",
+    "text": "An abandoned grand ballroom in a crumbling palace. Ornate chandeliers still hang from a ceiling with peeling frescoes. Overgrown vines crawl through broken windows. Dust particles float in shafts of light piercing through holes in the roof. Rotting parquet floor reflects the decayed grandeur. A faded red velvet curtain hangs in ruins. Dramatic, melancholic, architectural decay, cinematic lighting. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "UrbanDecay",
+      "AbandonedPlaces"
+    ],
+    "image": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_007"
+  },
+  {
+    "title": "Desert Dunes at Dusk",
+    "text": "Vast desert landscape at dusk with perfectly smooth sand dunes creating elegant shadow lines. Warm orange and deep magenta sky transitions to deep blue at the zenith. A single camel caravan is silhouetted against the glowing horizon. Wind creates subtle ripple patterns across the sand surface. Shot from low angle to emphasize the scale. Minimalist, majestic, ultra-wide composition. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "DesertVibes",
+      "MinimalistNature"
+    ],
+    "image": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_008"
+  },
+  {
+    "title": "Underwater World",
+    "text": "Spectacular underwater photography in a tropical coral reef. Crystal clear azure water with shafts of sunlight piercing down from the surface. Vibrant coral formations in every color — orange staghorn, purple sea fans, brain corals. A sea turtle glides gracefully through the frame. Schools of colorful tropical fish create living curtains of color. Shot from below looking up toward the shimmering surface. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "Underwater",
+      "OceanLife"
+    ],
+    "image": "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_009"
+  },
+  {
+    "title": "Double Exposure Soul",
+    "text": "Artistic double exposure portrait merging a woman's face with a dense forest landscape. Her facial features blend seamlessly with towering pine trees, misty valleys, and a flowing river. The forest exists within her silhouette — her hair becomes treetops, her eyes are forest clearings. Monochromatic blue-green tones. Ethereal, spiritual, nature-human connection. Fine art photography style. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "DoubleExposure",
+      "FineArt"
+    ],
+    "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_010"
+  },
+  {
+    "title": "Milky Way Mountain",
+    "text": "Breathtaking astrophotography of the Milky Way galaxy arching over a dramatic mountain peak. Thousands of stars visible in deep space with the galactic core glowing in warm amber and purple tones. Snow-capped mountain peak in sharp foreground. Reflection of stars in a glassy alpine lake below. No moon, perfect darkness. 15-second exposure, wide aperture. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "Astrophotography",
+      "MilkyWay"
+    ],
+    "image": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_011"
+  },
+  {
+    "title": "Editorial Fashion Roof",
+    "text": "High-fashion editorial photography on a modernist rooftop at sunrise. Model in an avant-garde sculptural white dress that flows dramatically in the wind. The city skyline with golden clouds behind. Harsh directional lighting creates deep shadows on the architectural details. Shot from below looking up, the model appears powerful against the sky. Vogue-level composition, film grain. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "FashionEditorial",
+      "Rooftop"
+    ],
+    "image": "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_012"
+  },
+  {
+    "title": "Cherry Blossom Dream",
+    "text": "A magical scene beneath a canopy of fully bloomed cherry blossom trees in Japan. Thousands of pale pink petals drift through soft morning light like snow. A young woman in a traditional white kimono with delicate pink embroidery walks along the path, her face turned upward catching falling petals. Shallow depth of field, bokeh blossom background. Gentle, ethereal, timeless. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "CherryBlossom",
+      "JapanVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_013"
+  },
+  {
+    "title": "Minimal Architecture",
+    "text": "Ultra-minimalist architectural photography of a white modernist building against a perfectly clear blue sky. Pure geometric shapes — clean lines, sharp angles, perfect symmetry. A single narrow shadow cuts diagonally across the white facade. One tiny figure in red clothing for scale and color contrast. Shot from below with a tilt-shift lens creating perfect perspective. Swiss-level precision. --ar 1:1",
+    "emoji": "",
+    "tags": [
+      "MinimalArch",
+      "CleanLines"
+    ],
+    "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=800&q=80",
+    "ratio": "1:1",
+    "id": "new_014"
+  },
+  {
+    "title": "Stormy Ocean Power",
+    "text": "Dramatic seascape during a powerful storm. Massive dark waves 15 meters high crash against a lone lighthouse. Lightning bolt strikes the dark churning sea in the background. The lighthouse glows warm and defiant against the chaos. Spray and foam fill the air. Dark storm clouds create a menacing sky. Long exposure blur on the water. Extreme weather photography, cinematic tension. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "StormChaser",
+      "OceanPower"
+    ],
+    "image": "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_015"
+  },
+  {
+    "title": "Bokeh City Nights",
+    "text": "Portrait of a young man in the city at night with stunning bokeh background. Street lights and neon signs create a sea of colorful circular light orbs behind him — gold, red, blue, white. His face is warmly lit by a single practical light source. Relaxed expression, casual fashion. 85mm f/1.4 lens, extremely shallow depth of field. The bokeh shapes form an abstract painting behind him. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "BokehPortrait",
+      "NightPhotography"
+    ],
+    "image": "https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_016"
+  },
+  {
+    "title": "Snow Peak Solitude",
+    "text": "A lone mountaineer in bright orange jacket stands on a razor-thin snow ridge at 8000m altitude. Below stretches an infinite sea of clouds in all directions. Other Himalayan peaks emerge from the clouds in the distance. Cold blue-white tones, harsh wind creates a snow plume from the ridge. The figure is small, vulnerable, yet triumphant against the massive scale. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "Mountaineering",
+      "HighAltitude"
+    ],
+    "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_017"
+  },
+  {
+    "title": "Autumn Leaves Portrait",
+    "text": "Warm, intimate portrait of a young woman in a golden autumn forest. She holds a handful of orange and red maple leaves up to the light, her face illuminated by the warm glow filtering through. The entire background is a explosion of autumn color — deep reds, burned oranges, warm yellows. She wears an oversized camel coat. Soft focus edges, film grain, nostalgic warmth. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "AutumnVibes",
+      "PortraitPhotography"
+    ],
+    "image": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_018"
+  },
+  {
+    "title": "Ice Cave Wonder",
+    "text": "Inside a magical ice cave in Iceland with walls of brilliant translucent blue glacial ice. Light filters through the thick ice creating an otherworldly electric blue glow. A person in a small red jacket stands in the tunnel for scale, dwarfed by the massive ice formations. Frozen crystal formations hang from the ceiling. Surreal, alien-like beauty, ultra-detailed ice textures. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "IceCave",
+      "IcelandVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_019"
+  },
+  {
+    "title": "Levitation Fantasy",
+    "text": "A surreal levitation photo of a young woman floating 3 meters above a wildflower meadow. Her white dress flows upward defying gravity, petals from the field orbit around her in slow spiral. Her eyes closed in peaceful meditation. Below the meadow stretches endlessly, above the sky transitions from warm gold to deep violet. Magical realism, fine art surrealism, hyperrealistic. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "LevitationPhoto",
+      "SurrealArt"
+    ],
+    "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_020"
+  },
+  {
+    "title": "Urban Geometry",
+    "text": "Looking straight up (worm's eye view) from the base of towering modern glass skyscrapers. The buildings converge in perfect symmetry toward a vanishing point in the center. Reflective glass surfaces mirror clouds and blue sky creating infinite geometric patterns. A flock of birds creates an organic element against the rigid architecture. Strong lines, bold composition, graphic design sensibility. --ar 1:1",
+    "emoji": "",
+    "tags": [
+      "UrbanGeometry",
+      "AbstractArchitecture"
+    ],
+    "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=800&q=80",
+    "ratio": "1:1",
+    "id": "new_021"
+  },
+  {
+    "title": "Foggy Morning Lake",
+    "text": "Peaceful early morning lake scene with thick white fog sitting low over the still water. Ancient weeping willow trees line the bank, their branches trailing into the mist. A lone wooden rowing boat sits perfectly still at the dock. Soft pastel light barely penetrates the fog. A heron stands motionless on a rock. Perfect mirror reflection in the glassy water. Meditative, quiet, Japanese ink painting quality. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "MorningFog",
+      "LakeVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_022"
+  },
+  {
+    "title": "Glitch Art Portrait",
+    "text": "Digital glitch art portrait of a woman's face with intentional digital corruption effects. Her face is fragmented into RGB color channel offsets, scan line distortions, and pixel sorting artifacts. Parts of her face appear to dissolve into static noise and data corruption. The color palette is sharp neon against near-black. VHS aesthetic, CRT monitor distortions, digital entropy, beautiful imperfection. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "GlitchArt",
+      "DigitalArt"
+    ],
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_023"
+  },
+  {
+    "title": "Rainy Window Mood",
+    "text": "Intimate moody portrait through a rain-streaked window. A person sits inside a warm cafe, their face softly lit by amber interior light. The rain on the glass distorts and fragments their reflection. Bokeh street lights glow outside in the cold dark. They hold a warm cup of coffee, looking contemplatively into the distance. Film grain, desaturated with warm amber shadows. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "RainyMood",
+      "CafeVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_024"
+  },
+  {
+    "title": "Wildfire Landscape",
+    "text": "Dramatic and powerful landscape with a wildfire burning across a valley at night. Walls of orange and red flame light up the dark sky. A road in the foreground cuts through the frame, with embers drifting across it. The fire reflects in the windows of an abandoned farmhouse. Smoke billows upward into a sky stained with an apocalyptic orange glow. Raw nature power, cinematic catastrophe. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "WildfireArt",
+      "DramaticNature"
+    ],
+    "image": "https://images.unsplash.com/photo-1601302630466-4e9e8d7a1ad2?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_025"
+  },
+  {
+    "title": "Flower Field Freedom",
+    "text": "A woman in a flowy white sundress spins with arms open in a vast lavender field in Provence, France. Purple stretches to the horizon in every direction. The sun is behind her creating a warm backlit halo effect with lens flare. Her face is turned up toward the sky, expression pure joy. Soft focus, warm golden tones, motion blur on her spinning dress. Freedom, joy, summer escape. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "LavenderField",
+      "SummerVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1490750967868-88df5691cc85?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_026"
+  },
+  {
+    "title": "Dramatic Black & White",
+    "text": "Powerful black and white portrait of an elderly man with a deeply weathered face. Every wrinkle, every scar tells a lifetime of stories. Intense eyes stare directly into camera. Dramatic Rembrandt lighting from one side with deep shadows. Close-up framing, every skin pore and hair detail visible. No softening, no retouching — raw authenticity. Shot on Leica, Kodak Tri-X 400 film grain. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "BlackWhitePortrait",
+      "HumanStory"
+    ],
+    "image": "https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_027"
+  },
+  {
+    "title": "Bioluminescent Beach",
+    "text": "A magical beach at night where bioluminescent plankton lights the shoreline in electric blue light. Each wave that crashes glows bright neon blue as it washes across the dark sand. Stars fill the sky above. A person stands at the water's edge in silhouette, surrounded by the glowing blue water swirling around their feet. Milky Way visible overhead. Otherworldly, magical, rare natural wonder. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "Bioluminescence",
+      "NightBeach"
+    ],
+    "image": "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_028"
+  },
+  {
+    "title": "Concrete Jungle Portrait",
+    "text": "Street fashion portrait in a brutalist concrete urban environment. Model wearing oversized military jacket and cargo pants leans against a massive grey concrete wall covered in abstract graffiti. Harsh midday sun creates dramatic shadows. The concrete texture and urban graffiti create a gritty, raw backdrop. Desaturated film look with punchy contrast. Fashion meets street art. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "StreetFashion",
+      "BrutalistVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_029"
+  },
+  {
+    "title": "Northern Lights Dance",
+    "text": "Spectacular aurora borealis (Northern Lights) display over a frozen tundra landscape. Massive curtains of green, purple, and white light dance across the entire sky in fluid ribbons. A traditional Sami tent glows orange from within, its warm light reflecting on the snow below. Crisp cold air, infinite darkness beyond the aurora. Astrophotography, long exposure, Norway at its most magical. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "NorthernLights",
+      "ArcticVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_030"
+  },
+  {
+    "title": "Ink In Water",
+    "text": "Macro photography of black ink slowly diffusing and billowing in crystal clear water. The ink creates organic, smoke-like formations — tendrils reaching in all directions, forming fractal-like patterns that resemble deep space nebulae or storm systems. Pure white background. Time-stop moment of pure elegance and chaos. Ultra-macro lens, high-speed photography, 4K detail. --ar 1:1",
+    "emoji": "",
+    "tags": [
+      "MacroArt",
+      "InkWater"
+    ],
+    "image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=800&q=80",
+    "ratio": "1:1",
+    "id": "new_031"
+  },
+  {
+    "title": "Balcony City View",
+    "text": "Cinematic lifestyle shot from a luxury penthouse balcony overlooking a glittering city at blue hour. A person stands at the glass railing holding a glass of wine, back to camera, gazing at the sprawling city lights below. Warm interior light spills out from the apartment behind them. The city stretches to infinity. Aspirational, elegant, luxury lifestyle photography. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "LuxuryLifestyle",
+      "CityView"
+    ],
+    "image": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_032"
+  },
+  {
+    "title": "Minimalist Portrait White",
+    "text": "Extremely clean minimalist studio portrait against pure white background. Subject wears an all-white outfit. Lighting is completely flat and even — no shadows anywhere. The only contrast is the person's skin and hair against the white. Their expression is neutral and direct. Perfect symmetry. Think Juergen Teller, high fashion editorial simplicity. White on white with just enough contrast. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "MinimalistPortrait",
+      "WhiteStudio"
+    ],
+    "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_033"
+  },
+  {
+    "title": "Explosion Color Paint",
+    "text": "High-speed action photography of a dancer mid-leap surrounded by an explosion of colorful powder paint. Multiple colors burst simultaneously — vivid red, yellow, blue, green — creating a rainbow cloud around the figure. The person is frozen mid-air in a dramatic ballet pose. Black background for maximum color impact. Frozen at 1/8000 second shutter speed. Joy, energy, pure color explosion. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "HoliColors",
+      "ActionPortrait"
+    ],
+    "image": "https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_034"
+  },
+  {
+    "title": "Cracked Earth Texture",
+    "text": "Extreme macro close-up of cracked, dried earth in a drought-stricken landscape. The ground splits into a mosaic of irregular polygon shapes, each piece curling slightly at the edges. Warm terracotta and deep ochre tones. A single tiny green seedling pushes through one of the cracks — life and hope in the harshest conditions. Metaphor for resilience. Stunning abstract natural texture. --ar 1:1",
+    "emoji": "",
+    "tags": [
+      "AbstractNature",
+      "TextureArt"
+    ],
+    "image": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=800&q=80",
+    "ratio": "1:1",
+    "id": "new_035"
+  },
+  {
+    "title": "Rooftop at Sunset",
+    "text": "Young man sits on the ledge of a rooftop with legs dangling over the edge, looking out at a spectacular city sunset. His back is to camera. The entire sky is a gradient of fire — burning orange at the horizon fading to deep crimson then violet at the top. City buildings are dark silhouettes below. Wind blows his jacket slightly. Urban solitude, introspection, freedom. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "RooftopVibes",
+      "SunsetMood"
+    ],
+    "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_036"
+  },
+  {
+    "title": "Tribal Warrior",
+    "text": "Powerful portrait of a Maasai warrior in traditional red shuka cloth against the vast East African savanna. Intricate beadwork jewelry in bright reds and blues. Ochre and charcoal face paint in geometric patterns. A long spear held at his side. Golden hour light makes his skin glow warm. The savanna and acacia trees stretch behind in the distance under a massive African sky. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "CulturalPortrait",
+      "AfricanVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_037"
+  },
+  {
+    "title": "Waterfall Serenity",
+    "text": "A spectacular waterfall drops 100 meters into a crystal-clear pool surrounded by lush tropical jungle. Soft silky water blur from 2-second exposure. Rainbow forms in the mist at the base. Lush green ferns and tropical flowers line the rocks. A tiny human figure stands at the base for scale. Emerald green water, rich jungle greens, misty atmosphere. Paradise photography. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "WaterfallVibes",
+      "TropicalParadise"
+    ],
+    "image": "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_038"
+  },
+  {
+    "title": "Speed Light Trails",
+    "text": "Long exposure night photography of a sweeping highway interchange with light trails from car headlights and taillights. White and red streams of light flow in perfect curves creating an abstract painting of motion. City skyline glows in the background. Shot from elevated bridge above, 30-second exposure. Urban infrastructure transformed into pure abstract art by the magic of long exposure. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "LightTrails",
+      "LongExposure"
+    ],
+    "image": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_039"
+  },
+  {
+    "title": "Macro Butterfly Wing",
+    "text": "Extreme macro photography of a butterfly wing showing the intricate microscopic structure of individual scales arranged in overlapping geometric patterns. The scales are iridescent, shifting from deep cobalt blue to vivid green to purple depending on light angle. Like a microscopic mosaic or stained glass window. The detail and complexity reveal nature's hidden architecture. --ar 1:1",
+    "emoji": "",
+    "tags": [
+      "MacroPhotography",
+      "NatureDetail"
+    ],
+    "image": "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?auto=format&fit=crop&w=800&q=80",
+    "ratio": "1:1",
+    "id": "new_040"
+  },
+  {
+    "title": "Ancient Temple Ruins",
+    "text": "Mystical ruins of an ancient Khmer temple deep in a jungle. Massive stone blocks covered in thick green moss. Tree roots from enormous banyan trees slowly consume and embrace the stone walls over centuries. Shafts of golden light pierce through gaps in the canopy. Atmospheric mist fills the spaces between carved stone columns. A lone monk in orange robes walks through the ruins. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "TempleVibes",
+      "AncientWonders"
+    ],
+    "image": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_041"
+  },
+  {
+    "title": "Floating Lanterns",
+    "text": "Thousands of glowing paper lanterns float upward into a deep indigo night sky during the Yi Peng festival in Thailand. Each lantern glows warm amber and gold as it rises. A sea of upturned faces below are illuminated by the collective glow. Some lanterns are close and sharp, others are distant pinpoints of light blending with the stars. Magical, spiritual, breathtaking. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "LanternFestival",
+      "ThailandVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_042"
+  },
+  {
+    "title": "Mirror Lake Reflection",
+    "text": "Perfect mirror reflection of snow-capped mountains in an absolutely still alpine lake at dawn. The reflection is so perfect it's nearly indistinguishable from reality. Symmetrical composition with the horizon line exactly in the center. Soft pastel pink and blue sky. Pine forest perfectly reflected. The scene is utterly peaceful and impossibly beautiful. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "MirrorLake",
+      "AlpineVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_043"
+  },
+  {
+    "title": "Fire Dancer",
+    "text": "Dynamic action shot of a fire dancer performing at night on a beach. Multiple fire poi create circular trails of flame around the dancer's silhouette through long exposure. The ocean and stars are in the background. The dancer's flowing clothes catch the orange light. Warm fire tones against the deep blue of the night sea. Energy, skill, primal beauty. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "FireDance",
+      "BeachNight"
+    ],
+    "image": "https://images.unsplash.com/photo-1601302630466-4e9e8d7a1ad2?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_044"
+  },
+  {
+    "title": "Rustic Cottage Morning",
+    "text": "A charming stone cottage in the English countryside on a misty autumn morning. Smoke rises gently from the chimney. The garden is overgrown with climbing roses and hollyhocks. A dirt path leads to a wooden gate covered in ivy. Warm amber light glows from one window. Fallen leaves carpet the ground. A cat sits on the windowsill. Cozy, nostalgic, storybook quality. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "CottageCore",
+      "CountrysideVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_045"
+  },
+  {
+    "title": "Abstract Geometry Neon",
+    "text": "Pure abstract digital art — a complex three-dimensional geometric structure made of interconnected triangles and hexagons. The structure glows with neon gradients — electric blue transitions to hot pink to vivid purple. The background is pure black deep space with faint star dust. Rotating slowly, the structure creates an organic, crystalline appearance. Futuristic, mathematical beauty. --ar 1:1",
+    "emoji": "",
+    "tags": [
+      "AbstractArt",
+      "NeonGeometry"
+    ],
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+    "ratio": "1:1",
+    "id": "new_046"
+  },
+  {
+    "title": "Vintage Film Street",
+    "text": "Nostalgic street photography in the style of 1970s New York City. A busy corner in Manhattan, yellow taxis everywhere, newspaper stands, people in 70s fashion. Grainy Kodachrome film simulation — faded reds and yellows, slightly washed-out colors. Slightly overexposed. A hot dog vendor in the foreground in sharp focus. The city chaos in soft focus behind. Time machine photography. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "VintageFilm",
+      "RetroVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_047"
+  },
+  {
+    "title": "Ocean Drone Overhead",
+    "text": "Perfect drone overhead shot looking straight down at turquoise shallow water over a coral reef. The patterns of sand, coral, and water create an abstract painting from above — patches of bright turquoise, deep blue shadows, white sand bars, dark coral formations. Two people snorkeling are tiny figures creating small shadows on the reef below. Pure aerial abstract art from nature. --ar 1:1",
+    "emoji": "",
+    "tags": [
+      "DroneBird",
+      "AerialOcean"
+    ],
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "ratio": "1:1",
+    "id": "new_048"
+  },
+  {
+    "title": "Dramatic Product Shot",
+    "text": "Luxury product photography of a high-end perfume bottle. The bottle sits on a dark reflective surface surrounded by dramatic smoke effects in complementary colors — deep violet and rose gold. Hard directional light creates powerful reflections and deep shadows. Liquid inside appears to glow. Droplets of water on the glass surface. Cinematic, aspirational, luxury branding. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "ProductPhotography",
+      "LuxuryBrand"
+    ],
+    "image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_049"
+  },
+  {
+    "title": "Jungle Portrait",
+    "text": "Editorial fashion portrait in a lush tropical jungle setting. A woman wears a dramatic emerald green silk gown that blends with the jungle greenery behind her. She stands between two massive tree trunks dripping with hanging vines. Diffused natural light filtered through the canopy above. Exotic flowers and ferns frame her. Wild, powerful, woman-as-nature editorial. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "JungleFashion",
+      "EditorialNature"
+    ],
+    "image": "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_050"
+  },
+  {
+    "title": "Crystal Ball Reflection",
+    "text": "Creative photography using a crystal glass ball to capture a reflected landscape. The ball sits in the foreground, perfectly round, and within its glass sphere the surrounding landscape appears inverted and distorted — a mountain scene reflected upside down within the crystal. The background outside the ball is softly blurred. --ar 1:1",
+    "emoji": "",
+    "tags": [
+      "CrystalBall",
+      "CreativePhotography"
+    ],
+    "image": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=800&q=80",
+    "ratio": "1:1",
+    "id": "new_051"
+  },
+  {
+    "title": "Sunrise Yoga Cliff",
+    "text": "A woman performs an advanced yoga pose (Warrior III) on the edge of a sea cliff at sunrise. She is in perfect balance, one leg extended behind, arms spread wide like wings. The sunrise bathes everything in rose gold light. The ocean below is hundreds of meters down, waves tiny. Backlit silhouette with glowing hair in wind. Health, strength, harmony with nature. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "YogaVibes",
+      "SunriseWellness"
+    ],
+    "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_052"
+  },
+  {
+    "title": "Snowstorm Portrait",
+    "text": "Intense portrait of a climber in the midst of a snowstorm high on a mountain. Their face is half-covered by a balaclava, only the eyes and forehead visible — eyes intensely focused, ice crystals on their eyelashes and eyebrows. Wind drives snow horizontally across the frame. Their jacket is crusted with ice. Raw determination and survival. Extreme environment photography. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "ExtremeSports",
+      "WinterSurvival"
+    ],
+    "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_053"
+  },
+  {
+    "title": "Moody Bar Interior",
+    "text": "Atmospheric interior photography of a moody cocktail bar. Dark wood, leather stools, rows of glowing amber spirit bottles backlit behind the bar. Hanging Edison bulbs create warm pools of light in the darkness. A skilled bartender in a waistcoat prepares a cocktail in the foreground — motion blur on the shaker. Smoke from a smoked cocktail drifts upward. Old Hollywood glamour. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "BarAesthetics",
+      "MoodyInterior"
+    ],
+    "image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_054"
+  },
+  {
+    "title": "Sand Dune Minimalism",
+    "text": "Pure minimalist landscape — a single massive sand dune photographed in the harshest midday desert light. The dune fills the frame diagonally, dividing it perfectly between blazing white sand in sunlight and deep shadow. The razor-sharp ridge line of the dune cuts across the frame. Not a single footprint. Perfect mathematical form. The sky above is simply blank white overexposed sky. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "DesertMinimalism",
+      "DuneArt"
+    ],
+    "image": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_055"
+  },
+  {
+    "title": "Monsoon Dance",
+    "text": "Joyful lifestyle photography of a woman dancing in a warm tropical monsoon downpour in a bright yellow sundress. She's soaked but laughing freely, face turned upward to the rain. Puddles reflect the dramatic dark rain clouds above. The streets around her are flooded. Street lights glint in the water. Spontaneous, free-spirited, rain-soaked happiness. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "MonsoonVibes",
+      "RainPhotography"
+    ],
+    "image": "https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_056"
+  },
+  {
+    "title": "Deep Space Nebula",
+    "text": "Breathtaking deep space image of a colorful nebula — a vast stellar nursery where new stars are being born. Massive pillars of gas and dust in vivid red, blue, and gold glow from the radiation of nearby stars. The scale is incomprehensible. Young blue stars shine intensely through gaps in the gas clouds. The blackness of space between is filled with thousands of distant galaxies. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "SpaceArt",
+      "NebulaPorn"
+    ],
+    "image": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_057"
+  },
+  {
+    "title": "Fashion in Alley",
+    "text": "High-energy street style fashion photography in a narrow colorful alley in Marrakech. A male model in a flowing white kaftan and sunglasses strides confidently toward camera. The ancient alley walls are painted in rich terracotta, cobalt blue, and saffron yellow. Locals going about their day are motion-blurred around him. He is sharp, assured, magnetic. Sun is harsh overhead creating dramatic shade. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "MoroccoFashion",
+      "StreetStyle"
+    ],
+    "image": "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_058"
+  },
+  {
+    "title": "Stone Path Forest",
+    "text": "A magical Japanese stone lantern path winding through a bamboo forest. The stone lanterns glow soft warm amber in the early morning mist. Bamboo stalks tower on both sides creating a living green tunnel. Soft filtered light from above. Moss covers every stone surface. The path curves and disappears into the mist. A red torii gate is partially visible in the distance. -- ar 9:16",
+    "emoji": "",
+    "tags": [
+      "JapanForest",
+      "ZenVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_059"
+  },
+  {
+    "title": "Electric Storm",
+    "text": "Dramatic multiple lightning bolt strike photograph over a city at night. Five or six simultaneous lightning bolts connect sky to ground across the city skyline. The city lights reflect in the wet streets below. The lightning illuminates the storm clouds from within creating a massive light show. Time-lapse composite of multiple strikes. The raw power of nature over human civilization. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "LightningStrike",
+      "StormPhotography"
+    ],
+    "image": "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_060"
+  },
+  {
+    "title": "Macro Water Droplet",
+    "text": "Incredible macro photography of a single water droplet at the exact moment of impact on a still water surface. The droplet creates a perfect crown-like splash with tiny secondary droplets flying outward. Inside the droplet, a miniature reflected landscape is visible. Captured at 1/10,000 second shutter speed. Background is smooth gradient from teal to deep blue. --ar 1:1",
+    "emoji": "",
+    "tags": [
+      "MacroDroplet",
+      "WaterArt"
+    ],
+    "image": "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?auto=format&fit=crop&w=800&q=80",
+    "ratio": "1:1",
+    "id": "new_061"
+  },
+  {
+    "title": "Candlelight Prayer",
+    "text": "Intimate and spiritual portrait of elderly hands holding a lit candle in prayer. Deep wrinkles and weathered skin in extreme close-up. The candle flame is the only light source, casting warm golden light and deep shadows. Behind the hands, the soft bokeh of many more candles glowing in a dark church. Deeply human, deeply spiritual. Documentary photography approach. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "SpiritualPortrait",
+      "CandlelightMood"
+    ],
+    "image": "https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_062"
+  },
+  {
+    "title": "Sunrise Hot Air Balloon",
+    "text": "Magical aerial scene of dozens of colorful hot air balloons floating over Cappadocia, Turkey at sunrise. The landscape below is extraordinary — ancient rock formations called fairy chimneys in warm golden light. The closest balloon fills the foreground in rich reds and golds. The valley glows in morning mist. A truly once-in-a-lifetime scene. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "HotAirBalloon",
+      "Cappadocia"
+    ],
+    "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_063"
+  },
+  {
+    "title": "Dramatic Product Food",
+    "text": "Dark and moody food photography — a perfectly crafted plate of fine dining cuisine. The dish is artfully composed with micro herbs, colorful sauces in geometric patterns, and textures that contrast beautifully. Single overhead spotlight creates dramatic shadows. Black slate plate, black background. A single dew drop on a herb leaf in sharp focus. The rest artfully blurred. --ar 1:1",
+    "emoji": "",
+    "tags": [
+      "FoodPhotography",
+      "FineDining"
+    ],
+    "image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=800&q=80",
+    "ratio": "1:1",
+    "id": "new_064"
+  },
+  {
+    "title": "Ghost Town Sundown",
+    "text": "A perfectly preserved ghost town in the American Southwest at sundown. Old wooden buildings, a saloon with creaking sign, a church with broken bell tower. Everything is bathed in deep orange and crimson sunset light. Dust blows along the empty street. Tumbleweed rolls past. An abandoned rocking chair moves slightly in the wind. Lonely, eerie, cinematic Western atmosphere. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "GhostTown",
+      "WesternVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1601302630466-4e9e8d7a1ad2?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_065"
+  },
+  {
+    "title": "Neon Lotus",
+    "text": "Surreal digital art of a giant lotus flower blooming in the middle of a dark urban intersection at night. The lotus petals glow from within with soft pink and white light. Neon reflections from surrounding city lights paint the petals in electric colors. People on the sidewalks stop and stare. A fusion of pure nature and artificial city light. Dream sequence quality. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "SurrealNature",
+      "NeonArt"
+    ],
+    "image": "https://images.unsplash.com/photo-1490750967868-88df5691cc85?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_066"
+  },
+  {
+    "title": "Skateboard Urban Action",
+    "text": "High energy action sports photography of a skateboarder performing a kickflip over a massive gap between two city rooftops. The skater is frozen perfectly mid-trick — board flipping beneath their feet, arms out for balance, the city sprawling far below between the buildings. Shot from a low angle on the landing rooftop. Dramatic sky behind, city depth below. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "SkatePhotography",
+      "UrbanAction"
+    ],
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_067"
+  },
+  {
+    "title": "Tidal Wave Abstract",
+    "text": "Abstract close-up of a massive ocean wave at the exact moment before it crashes. Shot from inside the tube of the wave looking out toward the light at the end of the barrel. The water is translucent jade green and blue. Foam and spray create white chaos around the frame. The light at the end of the barrel glows like a portal. Perfect surfing barrel photography. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "WavePhotography",
+      "SurfVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_068"
+  },
+  {
+    "title": "Golden Gate Fog",
+    "text": "The Golden Gate Bridge almost completely consumed by rolling white fog, with only the very tops of the iconic orange towers emerging above the thick sea of clouds. The fog flows like a river through the bay below the bridge deck. A clear blue sky above. The bridge towers appear to float between two worlds. Iconic, ethereal, unforgettable San Francisco at its most dramatic. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "GoldenGate",
+      "FogPhotography"
+    ],
+    "image": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_069"
+  },
+  {
+    "title": "Hummingbird Macro",
+    "text": "Incredible macro action photography of a hummingbird hovering in mid-air feeding from a vivid tropical flower. The wings are frozen in motion blur suggesting incredible speed — over 80 beats per second. The bird's iridescent green and red feathers catch the light like jewels. Tiny feet tucked under its body. The flower is in equal sharp focus. Nature's perfection. --ar 1:1",
+    "emoji": "",
+    "tags": [
+      "WildlifePhotography",
+      "HummingbirdVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?auto=format&fit=crop&w=800&q=80",
+    "ratio": "1:1",
+    "id": "new_070"
+  },
+  {
+    "title": "Tokyo Crossing Night",
+    "text": "The famous Shibuya crossing in Tokyo at night during rush hour. Hundreds of people cross simultaneously from all directions in a beautiful choreography of urban life. Neon advertisements illuminate the scene in a kaleidoscope of color from massive LED billboards. Shot from above from the Shibuya Sky observation deck. Time-lapse motion blur on pedestrians, sharp cityscapes. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "TokyoVibes",
+      "UrbanChaos"
+    ],
+    "image": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_071"
+  },
+  {
+    "title": "Lost in Translation",
+    "text": "Cinematic portrait of a young woman alone in a busy Tokyo hotel lobby. She sits in a large leather chair looking small against the grand space. Other hotel guests move in motion blur around her. She's still, contemplative, slightly disconnected. Warm hotel interior light contrasts with the cool dark city visible through the massive glass windows behind her. Emotional storytelling. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "LonelyPortrait",
+      "CinematicMood"
+    ],
+    "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_072"
+  },
+  {
+    "title": "Cave Diver Explorer",
+    "text": "Underwater cave diving photography — a diver in full gear with powerful torch lights explores a vast underwater cave system. The beam of their torch cuts through the crystal clear dark blue water illuminating ancient stalactites hanging from the cave ceiling that formed when the cave was above water thousands of years ago. Ethereal, mysterious, dangerous beauty. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "CaveDiving",
+      "UnderwaterExplore"
+    ],
+    "image": "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_073"
+  },
+  {
+    "title": "Festival Crowd Energy",
+    "text": "Massive music festival crowd at night — tens of thousands of people with their arms raised, phones lit up creating a sea of lights. The stage in the distance is an explosion of laser beams, pyrotechnics, and massive LED screens. The performer is a tiny silhouette against the light show. Confetti and smoke fill the air. Raw collective human energy and joy. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "FestivalVibes",
+      "MusicEnergy"
+    ],
+    "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_074"
+  },
+  {
+    "title": "Romantic Paris Rain",
+    "text": "Romantic nighttime Paris street scene in the rain near the Eiffel Tower. A couple shares an umbrella and a kiss on a glistening wet cobblestone street. Street lamps reflect in the puddles. The Eiffel Tower glows gold in the background distance. Parisian cafe lights glow warm from inside. Cinematic, timeless romance. Shot on 50mm, shallow depth of field, bokeh street lights. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "ParisVibes",
+      "RomanticPhotography"
+    ],
+    "image": "https://images.unsplash.com/photo-1490750967868-88df5691cc85?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_075"
+  },
+  {
+    "title": "Tribal Color Portrait",
+    "text": "Vibrant portrait of a woman with elaborate traditional face paint in geometric patterns — deep reds, whites, and ochre yellows. Intricate headdress made of feathers and beads. Her expression is proud and regal. Shot with a long telephoto lens creating soft background separation. The colors of her face paint are extraordinary and precise. Cultural celebration and identity. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "CulturalBeauty",
+      "TribalArt"
+    ],
+    "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_076"
+  },
+  {
+    "title": "Forest Sunbeams",
+    "text": "Magical forest photography with dramatic volumetric god rays piercing through a dark ancient forest canopy. The sunbeams are thick and visible, illuminating floating dust particles and spores in the air. The forest floor is carpeted in brilliant green ferns. Massive oak trees with gnarly roots frame the scene. One person stands in the center beam of light, arms raised. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "ForestLight",
+      "GodRays"
+    ],
+    "image": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_077"
+  },
+  {
+    "title": "Street Food Night Market",
+    "text": "Vibrant night market street food scene in Bangkok. Dozens of colorful stalls glow with bright neon signs and open flame cooking woks. Smoke and steam from the food creates an atmospheric haze. People crowd the narrow street. Close-up of a chef tossing noodles in a massive wok over intense blue gas flame, sparks and steam flying. Raw energy, color, food culture. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "NightMarket",
+      "StreetFood"
+    ],
+    "image": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_078"
+  },
+  {
+    "title": "Glacier Blue Ice",
+    "text": "Deep inside a glacial crevasse in Greenland. Walls of ancient ice in extraordinary shades of deep azure and cobalt blue — the color comes from compressed air bubbles squeezed out over thousands of years. The ice appears to glow from within. The crevasse narrows overhead into a razor-thin line of white sky. A geologist's rope dangles in the middle distance. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "GlacierVibes",
+      "BlueIce"
+    ],
+    "image": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_079"
+  },
+  {
+    "title": "Luxury Yacht Aerial",
+    "text": "Aerial drone shot of a massive white superyacht cutting through deep blue Mediterranean waters leaving a bright white foamy wake trail. The yacht is pristine white against the impossibly deep blue sea. A turquoise lagoon and a tiny Mediterranean island with white buildings are in the background. Clear shallow turquoise water near the island reveals the seabed. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "LuxuryYacht",
+      "MediterraneanVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_080"
+  },
+  {
+    "title": "Cathedral Light",
+    "text": "Interior of a Gothic cathedral flooded with colorful light streaming through massive stained glass windows. The ancient stone columns and vaulted ceiling are painted in moving patterns of red, blue, gold, and green light. A single person kneels in prayer at the altar far below — tiny against the immense scale of the architecture. Sacred, awe-inspiring, divine beauty. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "CathedralPhotography",
+      "SacredLight"
+    ],
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_081"
+  },
+  {
+    "title": "Retro Diner Portrait",
+    "text": "Cinematic retro portrait in a 1950s American diner. A young woman in a polka dot dress sips a milkshake through a straw at the counter. Chrome fixtures, red vinyl stools, checkered floor tiles. Neon signs glow pink through the window behind her. A jukebox glows in the corner. Saturated Kodachrome color palette, soft warm lighting. Americana nostalgia. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "RetroAmerica",
+      "DinerVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_082"
+  },
+  {
+    "title": "Wolf Pack Forest",
+    "text": "A pack of grey wolves emerges silently from a dense pine forest in Yellowstone at dusk. The alpha wolf leads in the foreground, pausing and looking directly at the camera with piercing yellow eyes. Snow on the ground, breath visible in the cold air. The forest behind is dark and mysterious. Shot with 600mm telephoto, incredible detail in their fur. Raw wilderness. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "WildlifePhotography",
+      "WolfPack"
+    ],
+    "image": "https://images.unsplash.com/photo-1601302630466-4e9e8d7a1ad2?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_083"
+  },
+  {
+    "title": "Perfume Splash Macro",
+    "text": "Ultra-high-speed macro photography of perfume being sprayed — frozen at 1/40,000 second. The fine mist creates an intricate crystalline structure in mid-air, each tiny droplet visible and sharp. The spray catches dramatic studio lighting creating rainbow prism effects in the droplets. The perfume bottle is luxurious and precisely sharp. Pure fragrance made visual and physical. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "MacroPhotography",
+      "ProductArt"
+    ],
+    "image": "https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_084"
+  },
+  {
+    "title": "Moonlit Sea",
+    "text": "Serene midnight seascape with a full moon reflecting in perfectly calm water. The moonlight creates a shimmering path across the sea surface stretching from the horizon directly toward the camera. A lone wooden pier extends into the water on the left, its old lamp glowing amber. The sky is deep navy blue with faint stars visible. Meditative, peaceful, timeless. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "MoonlitSea",
+      "NightSeascape"
+    ],
+    "image": "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_085"
+  },
+  {
+    "title": "Industrial Portrait",
+    "text": "Raw and powerful portrait of a steelworker at a foundry. His face is illuminated by the intense orange glow of molten steel in a ladle behind him. His protective gear, thick gloves, and visor are all in sharp detail. Sparks rain down around the frame. Sweat on his face catches the fierce orange light. His expression is focused, determined, skilled. Documentary portraiture at its finest. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "IndustrialPortrait",
+      "BlueCollarHero"
+    ],
+    "image": "https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_086"
+  },
+  {
+    "title": "Pink Cherry Storm",
+    "text": "A cinematic scene of a girl running through a blizzard of cherry blossom petals blown by the wind in a Japanese park. Thousands of pink petals fill every inch of the frame. She runs toward camera, face full of delight and wonder. Her pink coat matches the petals perfectly. The trees behind are barely visible through the petal storm. Dream sequence quality, slow motion feel. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "PetalStorm",
+      "JapanSpring"
+    ],
+    "image": "https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_087"
+  },
+  {
+    "title": "Abstract Oil Macro",
+    "text": "Extreme macro photography of oil and water mixing, creating abstract cellular patterns. The oil forms perfect spherical shapes of varying sizes that float in colored water. When lit from below, each sphere becomes a jewel-like lens. Colors shift from deep sapphire to emerald to amber across the frame. A natural abstract painting created by physics and light. --ar 1:1",
+    "emoji": "",
+    "tags": [
+      "AbstractMacro",
+      "LiquidArt"
+    ],
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+    "ratio": "1:1",
+    "id": "new_088"
+  },
+  {
+    "title": "Venice Gondola Dusk",
+    "text": "A gondola drifts through a narrow Venetian canal at dusk. The canal walls reflect the warm orange and pink sky above. The gondolier in his traditional striped shirt steers silently. Ancient mossy stone buildings line both banks, their windows glowing warm from within. The water is dark and glassy with perfect reflections. Romantic, timeless, effortlessly beautiful. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "VeniceVibes",
+      "GondolaMood"
+    ],
+    "image": "https://images.unsplash.com/photo-1490750967868-88df5691cc85?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_089"
+  },
+  {
+    "title": "Dramatic Clouds Portrait",
+    "text": "Environmental portrait of a farmer standing in his field as a massive thunderstorm approaches on the horizon. He stands with his back to camera, facing the enormous wall of dark anvil clouds that fills the entire sky. Lightning crackles within the cloud mass. The field around him is still lit by a dramatic last shaft of golden sunlight before the storm arrives. Heroic, elemental, cinematic. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "StormChaser",
+      "RuralPortrait"
+    ],
+    "image": "https://images.unsplash.com/photo-1601302630466-4e9e8d7a1ad2?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_090"
+  },
+  {
+    "title": "Forest Floor Macro",
+    "text": "Macro photography of a forest floor after rain. Every surface is covered in tiny droplets. A single red mushroom emerges from a carpet of bright green moss, beaded with perfect water drops that each contain a tiny reflected image of the forest above. Fallen autumn leaves in orange and burgundy surround it. Shot at extreme macro, razor-thin depth of field, f/2.8. --ar 1:1",
+    "emoji": "",
+    "tags": [
+      "ForestMacro",
+      "MushroomVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=800&q=80",
+    "ratio": "1:1",
+    "id": "new_091"
+  },
+  {
+    "title": "Space Station View",
+    "text": "View from the International Space Station window looking down at Earth. The curved horizon of the Earth is visible below — blue oceans, white cloud formations, and the thin line of the atmosphere glowing blue at the limb. The mechanical arm and solar panels of the ISS are visible in the foreground. Stars visible in the black of space above the atmosphere. Awe and perspective. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "SpaceView",
+      "AstronautLife"
+    ],
+    "image": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_092"
+  },
+  {
+    "title": "Garden Party Boho",
+    "text": "Dreamy boho lifestyle photography at an outdoor garden party. Strings of warm Edison bulbs criss-cross above a long wooden table set for a feast. Wildflowers in mason jars, candles everywhere. The golden hour light is soft and warm. A group of friends laugh and raise glasses, faces soft with joy. White linen, woven baskets, natural textures. Life feels perfect and full. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "BohoVibes",
+      "GardenParty"
+    ],
+    "image": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_093"
+  },
+  {
+    "title": "Shadow Play Portrait",
+    "text": "Creative portrait using window blind shadows. Horizontal lines of light and shadow stripe across a woman's face and bare shoulders, creating a dramatic zebra-like pattern. Her skin glows warmly in the sunlit strips while the shadow strips make her almost disappear. She looks directly at camera with a knowing expression. Graphic, bold, simple but powerful. --ar 3:4",
+    "emoji": "",
+    "tags": [
+      "ShadowArt",
+      "LightPlay"
+    ],
+    "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=800&q=80",
+    "ratio": "3:4",
+    "id": "new_094"
+  },
+  {
+    "title": "Marathon Determination",
+    "text": "Powerful sports photography at the finish line of a marathon. A runner crosses the finish line tape in extreme slow motion, their face showing pure raw determination and triumph after 42km of effort. Sweat flies in dramatic arcs. Their race number and timing chip are visible. The crowd in the background is a blurred sea of celebration. Every muscle, every vein visible in their face. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "SportsPhotography",
+      "MarathonSpirit"
+    ],
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_095"
+  },
+  {
+    "title": "Golden Hour Beach",
+    "text": "Two people walk barefoot hand in hand along a deserted beach at golden hour, silhouetted against the most spectacular sunset — the sky is a masterpiece of gold, rose, and lavender. Their long shadows stretch behind them across the wet sand. Gentle waves lap at their feet. The horizon is a razor-thin line of burning gold. Simple, perfect, timeless happiness. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "BeachSunset",
+      "GoldenCouple"
+    ],
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_096"
+  },
+  {
+    "title": "Misty Mountain Road",
+    "text": "A lone car drives along a winding mountain road in thick morning mist. The road disappears into the fog below. Pine trees on both sides fade into gray nothingness within 20 meters. The car's headlights create two bright cones in the mist. Shot from above on a hairpin bend. Moody, cinematic, solitary journey into the unknown. Muted green and grey color palette. --ar 16:9",
+    "emoji": "",
+    "tags": [
+      "MountainDrive",
+      "MistyVibes"
+    ],
+    "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
+    "ratio": "16:9",
+    "id": "new_097"
+  },
+  {
+    "title": "Abstract Frozen Moment",
+    "text": "A glass shattering in ultra-slow motion, captured at the precise moment of maximum fragmentation. Thousands of glass shards radiate outward in perfect crystalline formation, each shard catching the studio light and creating diamond-like sparkles. The original glass shape is still faintly recognizable in the pattern of the shards. Pure destruction as pure beauty. Black background, white light. --ar 1:1",
+    "emoji": "",
+    "tags": [
+      "HighSpeedPhoto",
+      "DestructionArt"
+    ],
+    "image": "https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&w=800&q=80",
+    "ratio": "1:1",
+    "id": "new_098"
+  },
+  {
+    "title": "Monastery Mountain Mist",
+    "text": "A Tibetan Buddhist monastery perched dramatically on the edge of a sheer cliff face in the Himalayas, half-hidden in morning clouds. The white and ochre buildings seem to grow organically from the rock. Prayer flags stream in the mountain wind. A solitary monk walks along a narrow path carved into the cliff. Ancient, spiritual, impossibly remote. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "TibetVibes",
+      "MonasteryLife"
+    ],
+    "image": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_099"
+  },
+  {
+    "title": "Magic Hour Surfer",
+    "text": "A surfer rides a perfect wave during golden hour as the sun touches the horizon. The entire wave is lit from behind by orange sunlight, making it translucent and glowing. The surfer is in sharp silhouette against the glowing wave. Spray from the crest catches the last light like gold dust. The ocean beyond glitters. Shot from the water at wave height with a wide angle. Pure surf poetry. --ar 9:16",
+    "emoji": "",
+    "tags": [
+      "SurfPhotography",
+      "GoldenWave"
+    ],
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "ratio": "9:16",
+    "id": "new_100"
   }
 ]
