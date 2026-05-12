@@ -196,27 +196,5 @@
     ],
     "text": "Hyper-realistic rain-soaked urban alley at midnight. Neon signs in electric pink, cyan and acid green reflect in cobblestone puddles. A hooded figure walks away from camera. Steam rises from grates. Film grain, anamorphic bokeh, Blade Runner neo-noir palette. Ultra-detailed rain droplets on every surface. --ar 9:16 --q 2",
     "image": "https://picsum.photos/id/11/800/1422"
-  },
-  {
-    "id": "np003",
-    "title": "Ancient Misty Forest",
-    "ratio": "3:4",
-    "tags": [
-      "ForestMagic",
-      "MorningMist"
-    ],
-    "text": "Ancient towering redwood forest at dawn. Thick white mist winds between massive trunks. Shafts of golden light pierce the canopy creating volumetric god rays. Ground carpeted in bright green moss. A narrow dirt path disappears into the fog. Dreamy, ethereal, cinematic. Deep greens and warm earth tones. --ar 3:4 --style raw",
-    "image": "https://picsum.photos/id/12/800/1067"
-  },
-  {
-    "id": "np004",
-    "title": "Galaxy Double Exposure",
-    "ratio": "3:4",
-    "tags": [
-      "CosmicArt",
-      "DoubleExposure"
-    ],
-    "text": "Artistic double-exposure portrait fusing a woman's serene face with the Milky Way galaxy. Her features blend with star fields, nebulae and cosmic dust. The galaxy swirls through her hair. Deep indigo, electric violet, and warm gold cosmic tones. Fine art photography meets astrophotography. --ar 3:4",
-    "image": "https://picsum.photos/id/13/800/1067"
   }
 ]
