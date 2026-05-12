@@ -1032,49 +1032,5 @@
     ],
     "text": "Dynamic parkour — a traceur mid-leap between two building ledges over a 15-story drop. Frozen at the peak of their arc, arms spread for balance, city sprawling far below between the buildings. Shot from the destination building at eye level. 200mm compression makes the gap appear terrifyingly small. --ar 9:16",
     "image": "https://picsum.photos/id/88/800/1422"
-  },
-  {
-    "id": "np079",
-    "title": "Snowflake Crystal Macro",
-    "ratio": "1:1",
-    "tags": [
-      "SnowflakeMacro",
-      "WinterDetail"
-    ],
-    "text": "Extreme macro of a single perfect snowflake on black velvet. Six-sided symmetry with intricate branching dendrites. Every tiny crystal plate and hollow column visible. Shot on a cold day with macro lens and ring flash. The crystal glows white and ice-blue against pure black. Nature's mathematics made visible. --ar 1:1",
-    "image": "https://picsum.photos/id/89/800/800"
-  },
-  {
-    "id": "np080",
-    "title": "Cliffs of Moher Aerial",
-    "ratio": "16:9",
-    "tags": [
-      "AerialCoast",
-      "CliffDrama"
-    ],
-    "text": "Aerial drone over the Cliffs of Moher in Ireland. The sheer 200-meter black rock face drops dramatically to the wild Atlantic. Waves crash in white foam explosions. The cliff edge is razor-sharp against turquoise-grey sea. A narrow coastal path runs along the top with tiny figures walking. Elemental, unforgettable. --ar 16:9",
-    "image": "https://picsum.photos/id/90/1422/800"
-  },
-  {
-    "id": "np081",
-    "title": "Bangkok Night Market Chef",
-    "ratio": "3:4",
-    "tags": [
-      "StreetFood",
-      "NightCulture"
-    ],
-    "text": "Atmospheric Bangkok night market. A chef tosses noodles in a massive wok over blue gas flame, sparks and steam erupting dramatically. Neon signs in red, yellow and green glow above. Smoke from open grills creates atmospheric haze. Crowds of people, vivid colors, the energy of real street food culture. --ar 3:4",
-    "image": "https://picsum.photos/id/91/800/1067"
-  },
-  {
-    "id": "np082",
-    "title": "Jokulsarlon Glacier Lagoon",
-    "ratio": "16:9",
-    "tags": [
-      "IcelandNature",
-      "GlacierLagoon"
-    ],
-    "text": "Jökulsárlón Glacier Lagoon at sunset — hundreds of blue and white ice blocks drift slowly in black water. The sunset turns sky deep amber and rose, reflecting in dark water and translucent ice. Seals lie on floating ice blocks. The glacier wall rises in the background. Iceland at its most surreal. --ar 16:9",
-    "image": "https://picsum.photos/id/92/1422/800"
   }
 ]
