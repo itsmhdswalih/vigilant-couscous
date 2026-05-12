@@ -185,16 +185,5 @@
     ],
     "text": "Ultra-cinematic silhouette of a lone figure standing on a rugged mountain cliff at golden hour. Sky explodes in deep amber, burnt orange, and violet haze. Subject in sharp black outline against the blazing horizon. Shot from low angle with wide lens. Epic scale, dramatic mood, long shadows across rocky terrain. Anamorphic lens flare, cinematic color grade. --ar 9:16 --style raw",
     "image": "https://picsum.photos/id/10/800/1422"
-  },
-  {
-    "id": "np002",
-    "title": "Neon Rain Alley Night",
-    "ratio": "9:16",
-    "tags": [
-      "NeonVibes",
-      "CyberpunkCity"
-    ],
-    "text": "Hyper-realistic rain-soaked urban alley at midnight. Neon signs in electric pink, cyan and acid green reflect in cobblestone puddles. A hooded figure walks away from camera. Steam rises from grates. Film grain, anamorphic bokeh, Blade Runner neo-noir palette. Ultra-detailed rain droplets on every surface. --ar 9:16 --q 2",
-    "image": "https://picsum.photos/id/11/800/1422"
   }
 ]
