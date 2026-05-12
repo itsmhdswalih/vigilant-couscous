@@ -229,49 +229,5 @@
     ],
     "text": "High fashion editorial on a glass-railed penthouse rooftop at blue hour. Model in a dramatic sculptural gown poses powerfully. City skyline stretches infinitely behind. Hard directional rim lighting creates strong shadows on fabric and face. Shot from below looking up. Vogue-level composition, anamorphic lens. --ar 3:4",
     "image": "https://picsum.photos/id/14/800/1067"
-  },
-  {
-    "id": "np006",
-    "title": "Desert Dune Minimalism",
-    "ratio": "16:9",
-    "tags": [
-      "DesertArt",
-      "MinimalLandscape"
-    ],
-    "text": "Pure desert minimalism. A single massive sand dune divides the frame diagonally — blazing sunlit white sand vs deep cool shadow. The razor-sharp ridge line cuts the frame with mathematical precision. Zero footprints. Delicate wind ripple patterns across the surface. Overexposed white sky. Ground-level composition. Extreme simplicity, extreme power. --ar 16:9",
-    "image": "https://picsum.photos/id/15/1422/800"
-  },
-  {
-    "id": "np007",
-    "title": "Underwater Coral Kingdom",
-    "ratio": "3:4",
-    "tags": [
-      "Underwater",
-      "CoralReef"
-    ],
-    "text": "Spectacular wide-angle underwater photograph inside a vibrant tropical reef. Crystal azure water, golden sunlight columns piercing down. Staghorn corals in orange and pink, massive brain corals, purple sea fans. A manta ray glides gracefully through frame. Schools of fish create living walls of color. Rich, saturated, breathtaking. --ar 3:4",
-    "image": "https://picsum.photos/id/16/800/1067"
-  },
-  {
-    "id": "np008",
-    "title": "Milky Way Mountain Mirror",
-    "ratio": "9:16",
-    "tags": [
-      "Astrophotography",
-      "StarReflection"
-    ],
-    "text": "Breathtaking astrophotography — full Milky Way arching over a snow-capped peak, perfectly reflected in a glassy alpine lake. Stars and galactic core appear above and below in perfect symmetry. Cold blue starlight, warm amber galactic core. 30-second exposure at f/2.0, ISO 6400. No light pollution. --ar 9:16",
-    "image": "https://picsum.photos/id/17/800/1422"
-  },
-  {
-    "id": "np009",
-    "title": "Cherry Blossom Dream",
-    "ratio": "9:16",
-    "tags": [
-      "SakuraMagic",
-      "JapanSpring"
-    ],
-    "text": "Magical sakura tunnel in Kyoto at dawn. Thousands of pale pink petals drift through soft morning haze. A woman in white kimono walks away along the stone path, hand raised catching petals. Soft backlight creates a luminous halo. Dreamy, delicate, timeless Japanese beauty. --ar 9:16",
-    "image": "https://picsum.photos/id/18/800/1422"
   }
 ]
