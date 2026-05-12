@@ -174,16 +174,5 @@
     "image": "https://raw.githubusercontent.com/itsmhdswalih/vigilant-couscous/main/data/images/dutsx18bx.jpeg",
     "ratio": "9:16",
     "id": "dutsx18bx"
-  },
-  {
-    "id": "np001",
-    "title": "Cinematic Golden Silhouette",
-    "ratio": "9:16",
-    "tags": [
-      "GoldenHour",
-      "Silhouette"
-    ],
-    "text": "Ultra-cinematic silhouette of a lone figure standing on a rugged mountain cliff at golden hour. Sky explodes in deep amber, burnt orange, and violet haze. Subject in sharp black outline against the blazing horizon. Shot from low angle with wide lens. Epic scale, dramatic mood, long shadows across rocky terrain. Anamorphic lens flare, cinematic color grade. --ar 9:16 --style raw",
-    "image": "https://picsum.photos/id/10/800/1422"
   }
 ]
