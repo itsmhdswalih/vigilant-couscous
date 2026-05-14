@@ -257,6 +257,35 @@
 
         Storage.prototype.getItem = function(key) { return origGetItem.call(this, key); };
 
+        // Seed initial copy counts and reactions (only if not already set)
+        (function() {
+          try {
+            var COPY_KEY = 'itsmhdswalih_copy_counts';
+            var REACT_KEY = 'itsmhdswalih_reactions';
+            var seedCopies = {"laula27sp":7,"rne174g8y":6,"6gaii3j0i":8,"7ijlrli2a":5,"hl1lee00f":5,"ofentlwkw":9,"9umtes5lk":9,"9o144tvis":12,"xbho6bx07":7,"l0kqseqf1":9,"xa5xqkczp":4,"tf3f8gyun":3,"4t5bn359k":3,"r9jo6h6p3":10,"dutsx18bx":4,"mg001":8,"mg002":11,"mg003":6,"mg004":9,"mg005":7,"mg006":5,"mg008":10,"mg009":12,"mg010":6,"mg011":8,"mg012":9,"mg013":7,"mg015":4,"mg016":11,"mg017":9,"mg018":6,"mg019":8,"mg020":10,"mg021":12,"mg022":7,"mg026":9,"mg027":6,"mg028":8,"mg030":5,"mg031":10,"mg032":7,"mg033":9,"mg034":11,"mg036":6,"mg037":8,"mg038":10,"mg039":7,"mg040":12,"mg042":9,"mg043":6,"mg045":8,"mg046":5,"mg048":4,"mg049":10,"mg051":7,"mg052":6,"mg054":9,"mg056":11,"mg057":8,"mg058":6,"mg059":10,"mg061":7,"mg062":9,"mg063":8,"mg064":11,"mg065":6,"mg066":9,"mg068":12,"mg069":7,"mg071":8,"mg072":10,"mg073":6,"mg075":9,"mg076":11,"mg077":7,"mg079":8,"mg080":10,"mg082":6,"mg083":9,"mg084":7,"mg085":11,"mg086":8,"mg087":12,"mg088":9,"mg089":6,"mg090":10,"mg091":7,"mg092":8,"mg093":11,"mg094":9,"mg095":6};
+            var seedReactions = {"laula27sp":{"fire":6,"love":0,"mindblown":1},"rne174g8y":{"fire":4,"love":4,"mindblown":3},"6gaii3j0i":{"fire":1,"love":4,"mindblown":0},"7ijlrli2a":{"fire":5,"love":0,"mindblown":0},"hl1lee00f":{"fire":5,"love":3,"mindblown":2},"ofentlwkw":{"fire":3,"love":2,"mindblown":1},"9umtes5lk":{"fire":4,"love":1,"mindblown":0},"9o144tvis":{"fire":6,"love":3,"mindblown":2},"xbho6bx07":{"fire":2,"love":1,"mindblown":1},"l0kqseqf1":{"fire":5,"love":2,"mindblown":0},"xa5xqkczp":{"fire":3,"love":2,"mindblown":1},"tf3f8gyun":{"fire":2,"love":1,"mindblown":0},"4t5bn359k":{"fire":1,"love":2,"mindblown":1},"r9jo6h6p3":{"fire":4,"love":3,"mindblown":0},"dutsx18bx":{"fire":2,"love":1,"mindblown":1},"mg001":{"fire":5,"love":2,"mindblown":1},"mg002":{"fire":6,"love":3,"mindblown":2},"mg003":{"fire":4,"love":2,"mindblown":1},"mg004":{"fire":5,"love":1,"mindblown":3},"mg005":{"fire":6,"love":3,"mindblown":0},"mg006":{"fire":3,"love":4,"mindblown":1},"mg008":{"fire":5,"love":2,"mindblown":2},"mg009":{"fire":6,"love":3,"mindblown":1},"mg010":{"fire":3,"love":1,"mindblown":2},"mg011":{"fire":5,"love":4,"mindblown":1},"mg012":{"fire":4,"love":2,"mindblown":3},"mg013":{"fire":3,"love":1,"mindblown":0},"mg015":{"fire":2,"love":3,"mindblown":1},"mg016":{"fire":5,"love":2,"mindblown":2},"mg017":{"fire":4,"love":3,"mindblown":1},"mg018":{"fire":3,"love":1,"mindblown":2},"mg019":{"fire":4,"love":2,"mindblown":1},"mg020":{"fire":5,"love":3,"mindblown":2},"mg021":{"fire":6,"love":4,"mindblown":1},"mg022":{"fire":3,"love":2,"mindblown":2},"mg026":{"fire":4,"love":1,"mindblown":3},"mg027":{"fire":5,"love":3,"mindblown":0},"mg028":{"fire":4,"love":2,"mindblown":1},"mg030":{"fire":2,"love":1,"mindblown":1},"mg031":{"fire":5,"love":3,"mindblown":2},"mg032":{"fire":3,"love":1,"mindblown":1},"mg033":{"fire":4,"love":2,"mindblown":2},"mg034":{"fire":5,"love":3,"mindblown":1},"mg036":{"fire":3,"love":2,"mindblown":1},"mg037":{"fire":5,"love":2,"mindblown":3},"mg038":{"fire":4,"love":3,"mindblown":1},"mg039":{"fire":5,"love":2,"mindblown":2},"mg040":{"fire":6,"love":4,"mindblown":1},"mg042":{"fire":4,"love":2,"mindblown":2},"mg043":{"fire":3,"love":1,"mindblown":1},"mg045":{"fire":4,"love":3,"mindblown":1},"mg046":{"fire":2,"love":3,"mindblown":0},"mg048":{"fire":2,"love":4,"mindblown":1},"mg049":{"fire":5,"love":2,"mindblown":2},"mg051":{"fire":4,"love":2,"mindblown":1},"mg052":{"fire":3,"love":3,"mindblown":1},"mg054":{"fire":4,"love":1,"mindblown":2},"mg056":{"fire":5,"love":2,"mindblown":3},"mg057":{"fire":3,"love":2,"mindblown":1},"mg058":{"fire":4,"love":1,"mindblown":2},"mg059":{"fire":5,"love":3,"mindblown":1},"mg061":{"fire":3,"love":2,"mindblown":1},"mg062":{"fire":4,"love":3,"mindblown":1},"mg063":{"fire":5,"love":2,"mindblown":2},"mg064":{"fire":6,"love":3,"mindblown":1},"mg065":{"fire":3,"love":1,"mindblown":2},"mg066":{"fire":4,"love":2,"mindblown":1},"mg068":{"fire":6,"love":4,"mindblown":2},"mg069":{"fire":3,"love":2,"mindblown":1},"mg071":{"fire":4,"love":1,"mindblown":2},"mg072":{"fire":5,"love":3,"mindblown":1},"mg073":{"fire":3,"love":1,"mindblown":1},"mg075":{"fire":4,"love":2,"mindblown":2},"mg076":{"fire":5,"love":3,"mindblown":1},"mg077":{"fire":3,"love":2,"mindblown":1},"mg079":{"fire":4,"love":1,"mindblown":2},"mg080":{"fire":5,"love":3,"mindblown":2},"mg082":{"fire":3,"love":1,"mindblown":1},"mg083":{"fire":4,"love":2,"mindblown":2},"mg084":{"fire":3,"love":2,"mindblown":1},"mg085":{"fire":6,"love":3,"mindblown":2},"mg086":{"fire":4,"love":2,"mindblown":1},"mg087":{"fire":6,"love":4,"mindblown":2},"mg088":{"fire":4,"love":2,"mindblown":2},"mg089":{"fire":3,"love":1,"mindblown":1},"mg090":{"fire":5,"love":3,"mindblown":1},"mg091":{"fire":3,"love":2,"mindblown":1},"mg092":{"fire":4,"love":2,"mindblown":2},"mg093":{"fire":5,"love":3,"mindblown":2},"mg094":{"fire":4,"love":2,"mindblown":1},"mg095":{"fire":3,"love":1,"mindblown":1}};
+            if (!origGetItem.call(localStorage, COPY_KEY)) {
+              origSetItem.call(localStorage, COPY_KEY, JSON.stringify(seedCopies));
+            } else {
+              // Merge seed into existing (add missing prompt IDs only)
+              try {
+                var existing = JSON.parse(origGetItem.call(localStorage, COPY_KEY));
+                var merged = Object.assign({}, seedCopies, existing);
+                origSetItem.call(localStorage, COPY_KEY, JSON.stringify(merged));
+              } catch(e) {}
+            }
+            if (!origGetItem.call(localStorage, REACT_KEY)) {
+              origSetItem.call(localStorage, REACT_KEY, JSON.stringify(seedReactions));
+            } else {
+              try {
+                var existingR = JSON.parse(origGetItem.call(localStorage, REACT_KEY));
+                var mergedR = Object.assign({}, seedReactions, existingR);
+                origSetItem.call(localStorage, REACT_KEY, JSON.stringify(mergedR));
+              } catch(e) {}
+            }
+          } catch(e) {}
+        })();
+
         // Load React bundle
         var s = document.createElement('script');
         s.type = 'module'; s.crossOrigin = '';
