@@ -385,17 +385,6 @@
     "ratio": "1:1"
   },
   {
-    "id": "mg022",
-    "title": "Shot: {",
-    "image": "https://images.meigen.ai/cdn-cgi/image/format=auto,quality=85/tweets/2011120752481665286/0.jpg",
-    "text": "{\n  \"shot\": {\n    \"composition\": \"full body dual shot, 50mm lens, static angle, high fashion composition\",\n    \"camera_motion\": \"static studio setup\",\n    \"frame_rate\": \"still photography\",\n    \"film_grain\": \"light vintage fashion grain, mimicking early 2000s campaigns\"\n  },\n  \"subject\": {\n    \"description\": \"Two female fashion models in bold editorial poses. One kneeling with long platinum pink hair, the other behind her with short black hair. Both wear mini Dior-style outfits and newspaper-printed thigh-high boots.\",\n    \"wardrobe\": \"designer print bikinis, newspaper-print thigh-high boots, large statement accessories, small shoulder bags\",\n    \"makeup\": \"bold eyeliner, overlined lips, high-gloss highlight on cheeks\",\n    \"hair\": \"model 1: platinum pink straight, long; model 2: short black wavy bob\"\n  },\n  \"scene\": {\n    \"location\": \"studio with white seamless backdrop\",\n    \"time_of_day\": \"artificial lighting, studio session\",\n    \"environment\": \"clean background, shadow below subjects from soft directional lighting\"\n  },\n  \"visual_details\": {\n    \"action\": \"model 1 kneeling and arching her back with attitude, model 2 seated close behind with hand on hip\",\n    \"props\": \"designer handbags, large earrings, over-the-knee boots with printed patterns\"\n  },\n  \"cinematography\": {\n    \"lighting\": \"flat studio light, front-lit with soft diffused fill, subtle shadows for contour\",\n    \"tone\": \"high-gloss, bold, provocative fashion magazine look\"\n  },\n  \"audio\": {\n    \"ambient\": \"none (photo)\",\n    \"music\": \"implied editorial fashion shoot silence\"\n  },\n  \"color_palette\": \"desaturated whites, chrome, denim blue, muted skin tones, with pops of print\",\n  \"dialogue\": {\n    \"character\": \"N/A\",\n    \"line\": \"\",\n    \"subtitles\": false\n  }\n}",
-    "tags": [
-      "character",
-      "vintage"
-    ],
-    "ratio": "4:3"
-  },
-  {
     "id": "mg026",
     "title": "First-person perspective inside a brightly lit super...",
     "image": "https://images.meigen.ai/cdn-cgi/image/format=auto,quality=85/tweets/2015451528929464593/0.jpg",
